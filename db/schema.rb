@@ -38,6 +38,12 @@ ActiveRecord::Schema.define(version: 20180428162219) do
     t.index ["list_id"], name: "index_tasks_on_list_id"
   end
 
+  create_table "todo_lists", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
