@@ -1,0 +1,14 @@
+<% if current_page?(action: 'new')%>
+    <%= "" %> 
+<% else %>
+	<% if current_page?(action: 'new')%>
+		<p><strong>Deadline:</strong>
+		<a><%= @deadline.strftime('%d %b %Y  %H:%M')%></a>
+		</p>
+	<% else %>
+		<p><strong>Deadline:</strong>
+		<a><%= @list.deadline_at.strftime('%d %b %Y  %H:%M')%></a>
+		</p>
+	<% end %>		
+<% end %>
+

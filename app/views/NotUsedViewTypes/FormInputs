@@ -1,0 +1,118 @@
+<!--########################################################################################-->
+// This was on the list_deadline_field that wasn't working is just in case I need it later 
+% if params[:created_at].blank? %>
+
+    <%= f.input :created_at, :label => "Set on", :as => :string, :input_html => { :value => localize(f.object.created_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+
+   <% else %>
+
+     <%= f.input :created_at, :label => "Set on2", :input_html => { :value => params[:created_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+
+<% end %>
+
+<!-- Deadline field -->
+<% if params[:created_at].blank? %>
+
+ <%= f.input :deadline_at, :label => "Deadline4", :as => :string, :input_html => { :value => localize(f.object.deadline_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+ <% else %>
+
+ <% end %>
+
+
+
+
+<!--########################################################################################-->
+
+ <!-- <% #if current_page?(action: 'new')%>
+      <%#= f.hidden_field :status, value: @completeness  %>
+     <% #else %>
+    <%#= f.hidden_field :status, value: @completeness  %>
+    <%# end %> -->
+
+
+
+
+
+<!--########################################################################################-->
+   <%#if current_page?(action: 'edit')%>
+    <p>  <strong>Completeness:</strong><!-- Has been defined on controllers Private method -->
+     <a><%= @list.status= @completeness %> %</a> 
+    </p>
+ 
+
+
+  <a><%#= list.status = @completeness %> </a> 
+
+
+
+
+
+
+// Task fields 
+<tr class="nested-fields">
+  <td>
+    <%= link_to_remove_association f do%><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+  </td>
+  <td><%= f.input :name, label: false %></td>
+  <td><%= f.input :status, input_html: { class: 'status'}, label: false, :collection => ['Created', 'In Progress', 'Completed'], :include_blank => false %></td>
+  
+  <td><%= f.input :deadline_at, label: false, :order => [:day, :month, :year] %></td>
+
+
+  <td><%= f.input :set_at, :as => :hidden, label: false, :order => [:day, :month, :year]%></td> 
+  
+  <%# new for testing fineshed column%>
+  <!--<td><%#= f.input :done_at, label: false, input_html: { class: 'fineshed', value: f.object.done_at || '0'} ///</td> %>-->
+
+   <td><%= f.input :updated_at, :as => :hidden, label: false, :order => [:day, :month, :year] %></td>
+   <td><%= f.input :status_value, :as => :hidden, label: false, input_html: { class: 'statusValue', value: f.object.status_value || '0'}  %></td> <!-- value: f.object.status_value || '0', is used to set the default value to 0. -->
+</tr>
+
+
+
+
+
+
+
+
+   <%#= f.input :deadline_at, :label => "Deadline", :id => "listDeadline", :input_html => { :value => DateTime.current.strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="form-control">
+    <%= f.input :name %>  
+    <%= f.input :status %>  
+  </div>
+  <br>
+  <br>  
+  <%# m =marging, p= padding, b= for classes that set margin-bottom or padding-bottom, x= x - for classes that set both *-left and *-right, w-50 give the width of the input %> 
+  <div class="form-group mx-sm-6 mb-3">
+    <label for="inputPassword2" class="sr-only">Name</label>
+    <input type="text" class="form-control w-50" id="inputPassword2" placeholder="Name">
+  </div>     
+  <div class="form-group mx-sm-6 mb-3">
+    <label for="inputPassword2" class="sr-only">Status</label>
+    <input type="text" class="form-control w-50" id="inputPassword2" placeholder="Status">
+  </div>
+    <br>
+    <br>
+  <div class="form-group row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+  </div>

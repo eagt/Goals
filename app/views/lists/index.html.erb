@@ -1,0 +1,48 @@
+<% provide(:page_title, 'Lists') %>
+<% provide(:list_active, 'active') %>
+
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h3>Lists</h3>
+<br>
+<br>
+<a>
+<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Lists</button>
+</a>
+<br>
+<br>
+<div class="table-responsive">
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Name</th> 
+      <th>Completed</th>     
+      <th>Set on</th>
+      <th>Deadline</th>
+      <th>Last Updated</th>           
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody class="lists">
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.name.split.map(&:capitalize)*' ' %></td>
+        <td class="complete"><%=list.status%>%</td>  
+        <td><%= list.created_at.strftime('%d %b %Y %H:%M') %></td>
+        <td><%= list.deadline_at.strftime('%d %b %Y %H:%M') %></td>
+        <td class="date"><%= list.updated_at.strftime('%d %b %Y %H:%M') %></td>      
+        <td><%= link_to list do %><i class="fa fa-binoculars"></i><% end %></td>
+        <td><%= link_to edit_list_path(list) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+        <td><%= link_to list, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<hr>
+<br>
+<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %></td>
+
+</div>
+
+

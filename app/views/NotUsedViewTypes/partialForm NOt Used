@@ -1,0 +1,108 @@
+<% if current_page?(action: 'new')%>
+ <p>  <strong>Set on:</strong>
+  <a><%= @setOn.strftime('%d %b %Y  %H:%M')%></a>
+</p>
+<% else %>
+  <strong>Set on:</strong>
+  <a><%= @list.deadline_at.strftime('%d %b %Y  %H:%M')%></a>
+</p>
+<% end %> 
+
+
+
+
+
+
+ <% if params[:set_at].blank? %>
+      <%= f.input :set_at, :label => "Set on", :id => "listSetAt", :input_html => { :value => DateTime.current.strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+    <% else %>
+      <%= f.input :created_at, :label => "Set on", :id => "listSetAt", :input_html => { :value => params[:created_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+    <% end %>
+
+
+
+
+
+
+  <% if params[:created_at].present? %>
+        <%= f.input :created_at, :label => "Set on", :id => "listSetAt", :input_html => { :value => :created_at.strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %> 
+    <% else %>
+     <%= f.input :set_at, :label => "Set on", :id => "listSetAt", :input_html => { :value => DateTime.current.strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+    <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= simple_form_for(@list)  do |f| %>
+  <%= f.error_notification %>
+  <br>
+  <br>
+  <div class=" mx-sm-6 mb-3 w-50"> 
+   <%= f.input :name, :label => "List", placeholder: "List Name", required: true %>
+    <!-- DateTime special format. Input always disable -->
+ 
+<% if params[:created_at].blank? %>
+
+        <%#= f.input :created_at, :label => "Set on2", :input_html => { :value => params[:created_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+
+   <% else %>
+
+
+
+      <%= f.input :created_at, :label => "Set on", :as => :string, :input_html => { :value => localize(f.object.created_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+
+<% end %>
+
+<!-- Deadline field -->
+<% if params[:created_at].blank? %>
+
+ <%#= f.input :deadline_at, :label => "Deadline4", :as => :string, :input_html => { :value => localize(f.object.deadline_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+ <% else %>
+
+ <% end %>
+
+ <%= f.input :status, :label => "Completeness", :as => :string, :input_html => {:value => @completeness} %>
+
+</div>
+  <br>
+  <h3>Tasks</h3>
+  <table class='table'>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Task Name</th>
+          <th>Status</th>
+          <th>Set On</th>
+          <th>Deadline</th>
+          <th>Last Updated</th>          
+          <th>Status Value</th>
+        </tr>
+      </thead>
+      <tbody class='tasks'>
+          <%= f.simple_fields_for :tasks do |builder| %>
+          <%= render 'task_fields', f: builder %>
+        <% end %>
+      </tbody>
+    </table>
+   <hr>
+  <div class="form-actions">
+      <%= link_to_add_association 'Add Task', f, :tasks, class: 'btn btn-primary', data: { association_insertion_node: '.tasks', association_insertion_method: :append } %>
+      <br>
+      <br>
+      <%= f.button :submit, class: 'btn btn-success' %>
+  </div>
+<% end %>
+
+
+

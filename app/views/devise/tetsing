@@ -1,0 +1,21 @@
+
+
+
+
+<div class="top js-top vh-100 bg-danger text-white d-flex">
+    <div class="container flex-fill">
+        <div class="row h-100 align-items-center py-1">
+            <div class="col-lg-12 h-100 flex-fill d-flex flex-column align-items-center">
+                <div class="my-auto text-center">
+                    <h1 class="top-title">
+                        <span class="top-title-1">text</span>
+                        <span class="top-title-2">title</span>
+                        <span class="top-title-3">text</span>
+                    </h1>
+                    <a href="" class="btn btn-redirect link-go-to-match">go</a>
+                </div>
+                <a href="#" class="btn-scroll-down js-btn-scroll-down"></a>
+            </div>
+        </div>
+    </div>
+</div>

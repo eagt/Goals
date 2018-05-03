@@ -1,5 +1,16 @@
 {
   "name": "simple_nest",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mariomc2/simple_nest.git",
+  "author": "tesdeve <tesdeve@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  },
+ 
 }

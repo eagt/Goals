@@ -1,0 +1,138 @@
+/* Passing the screen width */
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* <strong> for all app */
+strong {
+	font-size:22px;
+	font-weight: 480;
+}
+
+/* for all <a> tags that are NOT links on the page container */
+a {
+    font-size:18px;
+    font-weight: 200;
+}
+
+/* for all default buttons */
+.btn {
+	    font-size: 14px;
+}
+
+td.statusValue {
+    text-align: center;
+}
+
+tr.nested-fields {
+    background-color: #fcfff4;
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #f13b4d;
+    border-color: #dc3545;
+}
+
+.form-control {
+    width: 100%;
+}
+
+.display-none{
+  display:none;
+}
+
+.card-block {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.progress {
+    overflow: hidden;    
+    height: 20px;
+    margin-top: -25px; /* this will aling it on the right pace with Complpeteness */
+    margin-left: 170px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    float: left;
+    margin-left: 0px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #1f96fcc4;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+
+#error_explanation {
+        background-color: #f48d8d;
+        font-size : 15px;
+        font-color: #0c0808;
+        width: 550px;
+        padding-bottom: 3px;
+}
+
+.help-block {
+    color: #f48d8d;
+}
+
+i.fa-pencil-square-o{
+    color: #5e37ccdb;
+}
+
+.type {
+    font-size: 24px;
+    margin-top: 15px;
+    font-weight: 430;
+    font-style: normal;
+}
+
+strong {
+    font-size: 18px;
+    margin-right: 10px;
+    font-weight: 430;
+    font-style: normal;
+}
+
+.fa-plus:before {
+   margin-right: 20px;
+   display: inline-block;
+}
+
+h5 {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+button.showCompletedTasks, .showCompletedLists {  
+  margin-left: 0px;
+} 
+
+.showCompletedLists, .showCompletedTasks { 
+    background-color: #e97070;
+    color: white;
+    box-shadow: 1px 0px 1px 0px black;
+}
+
+.CompletedLists,  .CompletedTasks { 
+    background-color: #bdf5ce;
+    color: #070707;
+}
+    

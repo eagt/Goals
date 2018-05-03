@@ -1,0 +1,125 @@
+THIS WILL ALING BUT DOESN'T SHOW THE PROGRESS BAR 
+
+
+    <strong>Completeness :</strong>
+
+
+
+  <div id="completeness" class="progress">
+    <div class="progress-bar progress-bar-striped " role="progressbar" id="progress-bar" style="width: 0%"  aria-valuemin="0" aria-valuemax="100"><%=  @list.status %>% </div>
+  </div>
+
+
+######################################################################
+
+THIS IS THE ONE THAT REALLY WORKS BUT IT'S ALIGNED AND CAN'T TAKE AWAY THE     <a><%= @list.status %></a>  PART OF IT
+
+ <p id="completeness">
+    <strong>Completeness :</strong>
+    <a><%= @list.status %></a> <!-- Has been defined on controllers Private method 
+    DON'T PUT % SIGN AS IT WILL DAMAGE THE PROGRESS-BAR you need to add the progress bar inline here-->
+ 
+
+  <!-- Most likely it can be moved to a partial so I can reuse it on the Create/Edit actions -->
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped " role="progressbar" id="progress-bar" style="width: 0%"  aria-valuemin="0" aria-valuemax="100" > <%=  @list.status %>% </div>
+  </div>
+ </p>
+
+
+##################################################################
+
+
+
+
+
+
+
+<!--<%  f.input .blank? %>
+ <%#= f.input :created_at, :label => "Set on", :order => [:day, :month, :year], disabled: present? %>
+<%  %>
+ <%#= f.input :created_at, :label => "Set on", :as => :string, :input_html => { :value => localize(f.object.created_at, format: "%e %B %Y<!--  %H: %M") }, disabled: present? %>
+<%  %>-->
+
+
+<% if params[:foo].blank? %>
+<%= f.input :created_at, :label => "Set on", :order => [:day, :month, :year], disabled: present? %>
+<% else %>
+ <%= f.input :created_at, :label => "Set on", :as => :string, :input_html => { :value => localize(f.object.created_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+<% end %>
+
+
+
+
+<% if params[:created_at].blank? %>
+  <%= f.input :created_at, :label => "Set on1", :order => [:day, :month, :year], disabled: present? %> 
+<% else %>
+  <%= f.input :created_at, :label => "Set on2", :as => :string, :input_html => { :value => localize(f.object.created_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+<% end %>
+
+
+   <%= f.input :deadline_at, :label => "Deadline", :order => [:day, :month, :year], disabled: present? %>
+
+
+
+ <%= f.input :created_at, :label => "Set on2", :input_html => { :value => params[:created_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+
+   <%= f.input :deadline_at, :label => "Deadline", :input_html => { :value => params[:deadline_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %>
+
+
+
+
+
+
+ <% if params[:deadline_at].blank? %>
+ 
+     <%= f.input :deadline_at, :label => "Deadline1", :order => [:day, :month, :year], :as => :string, disabled: present? %> 
+ <% else %>
+    
+    <%= f.input :deadline_at, :label => "Deadline2", :as => :string, :input_html => { :value => localize(f.object.deadline_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+
+<% end %>
+
+
+
+
+<% if @list.exist? %>
+ <%= f.input :deadline_at, :label => "Deadline4", :as => :string, :input_html => { :value => localize(f.object.deadline_at, format: "%e %B %Y  %H: %M") }, disabled: present? %>
+ <% else %>
+
+ <%= f.input :deadline_at, :label => "Deadline3" %>
+ <% end %>
+
+
+
+
+
+
+
+
+
+
+
+ <%#= f.input :created_at, :label => "Set on1", :order => [:day, :month, :year], disabled: present? %>
+
+   <%#= render 'list_created_deadline_fields', list: @list %>
+ 
+ <%#= f.input :deadline_at, :label => "Deadline2", :order => [:day, :month, :year], disabled: present?  %>
+
+ <%#= f.input :deadline_at, :label => "Deadline1", :input_html => { :value => params[:deatline_at].strftime("%e %B %Y   %H: %M")}, :as => :string, disabled: present? %> 
+
+
+
+
+   <%#= f.input :done_at, :label => "Finished on",:order => [:day, :month, :year] %>
+   <%#= f.input :status, label: false, placeholder: "Status" %>
+
+
+   <%#= f.input_field :created_at, :as => :string, :value => time_format(f.object.created_at) %>   <%# will give me the format I want but only if it is f.input_field. If it is f.input it doesn't. %>
+
+<%#= The field below is to show how to do the field but it isn't supouse to exist %>
+   <%#= f.input :created_at, :input_html => { :value => DateTime.current.strftime("%d/%m/%Y - %H:%M %p")}, :as => :string, disabled: present? %>
+
+    <%#= f.input :created_at, :input_html => { :value => DateTime.current.strftime("%d/%m/%Y - %H:%M %p")}, :as => :string, disabled: present? %>
+
+

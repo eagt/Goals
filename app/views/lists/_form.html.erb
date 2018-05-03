@@ -1,0 +1,43 @@
+<%= simple_form_for(@list) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class=" mx-sm-6 mb-3 w-50"> 
+  <%= f.input :name, :label => "List", placeholder: "Enter List Name", autofocus: true, :label_html => { :class => 'type' }   %>
+  </div>
+  <%= render 'deadline_action_selection' %> 
+  <%= f.hidden_field :set_at, value: DateTime.current %>
+  <%= f.hidden_field :status, value: 'completeness' %>
+  <br>
+  <h4>Tasks</h4>
+  <!--<div class="card-block">
+    <div class="table-responsive">-->
+    <div class="table-responsive-lg">
+      <table class='table'>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Task Name</th>
+            <th>Status</th>          
+            <th>Deadline</th>
+            
+          </tr>
+        </thead>
+        <tbody class='tasks'>
+            <%= f.simple_fields_for :tasks do |builder| %>
+            <%= render 'task_fields', f: builder %>
+          <% end %>
+        </tbody>
+      </table>
+      <hr>
+    </div>
+    <div class="form-actions">
+      <%= link_to_add_association 'Add Task', f, :tasks, class: 'btn btn-primary', id: 'addTask', data: { association_insertion_node: '.tasks', association_insertion_method: :append } %>
+      <br>
+      <br>
+      <br>
+      <%= f.button :submit, class: 'btn btn-success', id: 'formButton'%>
+    </div>   
+  </div>
+<% end %>
+
+
+

@@ -1,0 +1,11 @@
+<% provide(:page_title, "Edit #{@list.name}") %>
+<% provide(:list_active, 'active') %>
+<br>
+<div class="container">
+	<h3>Editing List</h3>
+
+	<%= render 'form', list: @list %>
+	<hr>
+	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %> |
+	<%= link_to @list do %><i class="fa fa-binoculars"></i><% end %>
+</div>

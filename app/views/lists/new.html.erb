@@ -1,0 +1,9 @@
+<% provide(:page_title, 'New List') %>
+<% provide(:list_active, 'active') %> <%# Will pass the active status to the _navbar.html.erb class: "nav-link #{yield(:list_active)}", specifying in this particular case that the List tab should be active %>
+<div class="container">
+	<h3>New List</h3>
+	<br>
+	<%= render 'form', list: @list %>
+	<br>
+	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td>
+</div>

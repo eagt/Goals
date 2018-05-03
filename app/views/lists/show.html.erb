@@ -1,0 +1,60 @@
+<% provide(:page_title, @list.name) %>
+<% provide(:list_active, 'active') %>
+
+<div class="container">
+  <p>
+    <strong>List:</strong>
+    <a><%= @list.name.split.map(&:capitalize)*' ' %></a> 
+  </p>
+  <p>
+    <strong>Set On:</strong>
+    <a><%= @list.set_at.strftime('%d %b %Y - %H:%M')%></a>
+  </p>
+  <p>
+    <strong>Last Updated:</strong>
+    <a><%= @list.updated_at.strftime('%d %b %Y - %H:%M')%></a>
+  </p>
+  <p>
+    <strong>Deadline:</strong>
+    <a><%= @list.deadline_at.strftime('%d %b %Y - %H:%M')%></a>
+  </p>
+  <strong>Completeness :</strong>
+  <div id="completeness" class="progress">
+    <div class="progress-bar progress-bar-striped " role="progressbar" id="progress-bar" style="width: 0% "  aria-valuemin="0" aria-valuemax="100"><%=  @list.status %>% </div>
+  </div>
+
+  <hr>
+  <a>
+    <h5> Tasks</h5> <button type="button" class="btn showCompletedTasks active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Tasks</button>     
+  </a>
+  <div class='card-block'>
+    <div class='table-responsive'>
+    <table class="table" id="showtask">
+    	<thead>
+    	  <tr>
+    	    <th>Name</th>
+          <th>Status</th>  
+          <th class='statusValue'>Status Value</th>	           
+          <th>Set on</th>
+          <th>Deadline</th>
+        </tr>  	  
+      </thead>
+      <tbody class ='tasks'>
+        <% @list.tasks.each do |task| %>
+        <tr class="shTasks">
+    	    <td><%= task.name.split.map(&:capitalize)*' ' %></td>
+    	    <td class="showStatus"><%= task.status.split.map(&:capitalize)*' ' %></td>  
+          <td class='showStatusValue'><%= task.status_value%></td> 
+          <td><%= task.created_at.strftime('%d %b %Y %H:%M') %></td>     
+          <td class="showDeadline"><%= task.deadline_at.strftime('%d %b %Y %H:%M') %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <hr>
+    <br>
+    <%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td> |
+    <%= link_to edit_list_path(@list) do %><i class="fa fa-pencil-square-o"></i><% end %>
+    </div>
+  </div>
+</div>

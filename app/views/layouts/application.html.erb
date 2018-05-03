@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SimpleNest</title>
+    
+    <%# THIS IS A FULLY CUSTOMISED APPLICATION-TEMPLATE %>
+    <title><%= yield(:page_title) %> | Listis </title>
     <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'  %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'  %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+ 
+    <!-- Jquery script to be added -->
   </head>
 
   <body>
+	  <%= render 'layouts/navbar' %> <%# As it is outside the container it will use the fullwidth %>
+    <div class="container <%= controller_name %> <%= action_name %> "> <%#  controller_name &/or action_name will give the names of each one of them, this will be used for some refernces later %>
+    <br><br>
+    <%= render 'layouts/flash_notice_alert' %>
+
     <%= yield %>
+
+      <!-- Code below is used for the tooltips -->
+   <!--  <script> 
+      $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+        animation: true,
+        delay: {show:100, hide:200}   
+      });
+    </script>-->
+    
+    <%#= javascript_pack_tag 'application' %> 
+   
+   
+  <%# The links below may NOT be needed %>
+    </div>
+    <br><br><br><br> <br><br> 
+    <%= render 'layouts/footer.html.erb' %>
   </body>
 </html>

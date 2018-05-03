@@ -1,0 +1,43 @@
+
+.nav-item 
+
+
+
+
+
+/////////////////////   FROM NAVBAR /////////////////////////
+
+<% if false %> 
+<div class="collapse" id="33collapsingnavbar">
+  <div class="collapse-bg p-a-1">
+    <div class='card'>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <%= link_to 'Home', home_path, class: "nav-link #{yield(:home_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'lists', lists_path, class: "nav-link #{yield(:list_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Sing up', new_user_registration_path, class: "nav-link #{yield(:home_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Edit User', edit_user_registration_path, class: "nav-link #{yield(:home_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to 'Sing in', new_user_session_path, class: "nav-link #{yield(:home_active)}" %>
+        </li>
+        <li class="list-group-item">
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+        </li>
+  
+      </ul>
+    </div>
+  </div>
+</div>
+<% end %>
+
+//////////////////////////////////////////////////////////////////////
