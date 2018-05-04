@@ -52,7 +52,7 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :debug
+  config.log_level = :warn
 
   # Prepend all log lines with the following tags.
   config.log_tags = [ :request_id ]
@@ -91,7 +91,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.secret_key_base = ENV["SECRET_KEY_BASE"]  
+  config.secret_key_base = ENV["SECRET_KEY_BASE"]  # this has been uncommented to try is it was working
 
-  config.action_mailer.default_url_options = { :host => 'listispro.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://listispro.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
+ 
+  config.action_mailer.perform_deliveries = true
+
+
 end
