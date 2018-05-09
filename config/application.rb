@@ -30,7 +30,9 @@ module SimpleNest
 	  user_name: ENV["GMAIL_USERNAME"],
 	  password:  ENV["GMAIL_PASSWORD"],
 	  authentication: :plain,
-	  domain: 'gmail.com' 
+	  enable_starttls_auto: true,
+	  domain: 'gmail.com'  # Added to see if it will work after a block by Google
+
 	  }
 
 	  
