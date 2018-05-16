@@ -15,6 +15,7 @@ module SimpleNest
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # setting the ENV variables
 	  config.before_configuration do
 		  env_file = File.join(Rails.root, 'config', 'local_env.yml')
 		  YAML.load(File.open(env_file)).each do |key, value|
@@ -26,7 +27,6 @@ module SimpleNest
 	  config.action_mailer.smtp_settings = {
 	  address: 'smtp.gmail.com',
 	  port: 587,
-	  enable_starttls_auto: true,
 	  user_name: ENV["GMAIL_USERNAME"],
 	  password:  ENV["GMAIL_PASSWORD"],
 	  authentication: :plain,

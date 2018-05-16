@@ -5,7 +5,7 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update , :destroy]
   before_action :set_list_deadline_time_new, only: [:new]
   before_action :set_list_deadline, only: [:show, :edit]
-
+ 
   def index
     @lists = current_user.lists.all
   end
@@ -19,11 +19,12 @@ class ListsController < ApplicationController
   end
 
   def create
+    
     @list = current_user.lists.build(list_params)
     seton_create
     set_list_deadline 
     puts "    AQUI ESTA EL PUT" 
-    puts list_params  
+    puts list_params 
     respond_to do |format|
       if @list.save
         format.html { redirect_to @list, notice: ' list was successfully created.' }
@@ -35,7 +36,8 @@ class ListsController < ApplicationController
     end
   end
 
-  def edit     
+  def edit 
+
   end
 
  
@@ -97,6 +99,7 @@ class ListsController < ApplicationController
        @list.status = @list.tasks.average(:status_value).to_f.round
       end
     end
+
 
     def list_params
       params
