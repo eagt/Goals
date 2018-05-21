@@ -82,7 +82,7 @@ class ListsController < ApplicationController
     end
 
     def set_list_deadline_time_new
-      @deadline = DateTime.current
+      @deadline = DateTime.current 
     end
     
     def set_list_deadline

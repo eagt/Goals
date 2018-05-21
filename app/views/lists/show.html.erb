@@ -43,7 +43,7 @@
       <tbody class ='tasks'>
         <% @list.tasks.each do |task| %>
           <tr class="shTasks">
-      	    <td><%= task.name.split.map(&:capitalize)*' ' %></td>
+      	    <td><%= task.name.slice(0,1).capitalize + task.name.slice(1..-1) %></td>
       	    <td class="showStatus"><%= task.status.split.map(&:capitalize)*' ' %></td>  
             <td class='showStatusValue'><%= task.status_value%></td> 
             <td><%= task.created_at.strftime('%d %b %Y %H:%M') %></td>     
