@@ -110,8 +110,34 @@ if ($(".notice").text('successfully').length > 0)
 
 
 
+/////////////////////////
 
-
+var array = $('.showStatus').map(function () {
+        return $.trim($(this).text()) // Use trim to remove leading and trailing spaces
+        }).get()
+        var strCompleted = jQuery.inArray("Completed", array)
+        var trs = $('.tasks tr').length
+		if( trs > 0 && strCompleted != -1 ){
+		$(".fineshedOn").show()
+		$(".showDoneAt").show()
+		}else{
+		console.log ("It isn't")
+		$(".fineshedOn").hide()
+		$(".showDoneAt").hide()
+		}
+var array = $('.showStatus').map(function () {
+      return $.trim($(this).text()) // Use trim to remove leading and trailing spaces
+      }).get()
+      var strCompleted = jQuery.inArray("Completed", array)
+      var trs = $('.tasks tr').length
+		if( trs > 0 && strCompleted != -1 ){
+			
+			console.log ("It is")
+		}else{
+			console.log ("It isn't")
+			$(".fineshedOn").hide()
+			$(".showDoneAt").hide()
+		}
 
 
 

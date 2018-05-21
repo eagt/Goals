@@ -4,8 +4,19 @@
     </td>
     <td><%= f.input :name, label: false %></td>
     <td><%= f.input :status, input_html: { class: 'status'}, label: false, :collection => ['Created', 'In Progress', 'Completed'], :include_blank => false %></td>    
-    <td><%= f.input :deadline_at, label: false, :order => [:day, :month, :year]   %></td>
-    <td style="display:none"><%= f.hidden_field :set_at, value: DateTime.current, input_html: { class: 'setAt'} %></td>     
+    
+    <td><%= f.input :deadline_at, label: false,  :order => [:day, :month, :year]   %></td>
+    <td style="display:none"><%= f.hidden_field :created_at,  input_html: { class: 'setAt'} %></td>  
+    
+
+
+
+    <td style="display:none"><%= f.hidden_field :done_at, label: false,  :order => [:day, :month, :year]%></td>   
+    
+
+
+
     <td style="display:none"><%= f.hidden_field :last_updated, value: DateTime.current, :order => [:day, :month, :year] %></td>
+
     <td style="display:none"><%= f.input :status_value, :as => :hidden, label: false, input_html: { class: 'statusValue', value: f.object.status_value || '0'}  %></td> <!-- value: f.object.status_value || '0', is used to set the default value to 0. -->    
 </tr>

@@ -37,17 +37,23 @@
           <th class='statusValue'>Status Value</th>	           
           <th>Set on</th>
           <th>Deadline</th>
+          <th class='fineshedOn'>Fineshed on</th>
         </tr>  	  
       </thead>
       <tbody class ='tasks'>
         <% @list.tasks.each do |task| %>
-        <tr class="shTasks">
-    	    <td><%= task.name.split.map(&:capitalize)*' ' %></td>
-    	    <td class="showStatus"><%= task.status.split.map(&:capitalize)*' ' %></td>  
-          <td class='showStatusValue'><%= task.status_value%></td> 
-          <td><%= task.created_at.strftime('%d %b %Y %H:%M') %></td>     
-          <td class="showDeadline"><%= task.deadline_at.strftime('%d %b %Y %H:%M') %></td>
-        </tr>
+          <tr class="shTasks">
+      	    <td><%= task.name.split.map(&:capitalize)*' ' %></td>
+      	    <td class="showStatus"><%= task.status.split.map(&:capitalize)*' ' %></td>  
+            <td class='showStatusValue'><%= task.status_value%></td> 
+            <td><%= task.created_at.strftime('%d %b %Y %H:%M') %></td>     
+            <td class="showDeadline"><%= task.deadline_at.strftime('%d %b %Y %H:%M') %></td>
+            <% if task.status == "Completed" %>
+              <td class="showDoneAt"><%= task.done_at.strftime('%d %b %Y %H:%M') %></td>
+            <% else %>
+              <td class="showDoneAt"><%= ""%></td>
+            <%end %> 
+          </tr>
         <% end %>
       </tbody>
     </table>

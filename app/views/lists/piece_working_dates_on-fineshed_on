@@ -1,0 +1,73 @@
+  <!-- THIS IS WORKING PERFECTLY if left HERE on this view, can't be moved to partial -->
+           <% if task.status == "Completed" %>
+             <td><%= task.done_at.strftime('%d %b %Y %H:%M') %></td>
+           <% else %>
+             <td><%= "A"%></td>
+           <%end %> 
+
+
+
+
+CODE BELOW ISN'T WORKING
+
+             <!--<td> <%#= render '/lists/show_hide_fineshed_on'%> </td>  -->
+
+            <td><%= render partial: 'lists/show_hide_fineshed_on', locals: { task: @task} %></td>
+
+           
+
+
+           
+
+
+
+
+
+#	def task
+#		@task = task
+#	end
+
+
+
+
+
+
+
+#
+#def set_done_at
+#	done_at = DateTime.now 
+#end
+#
+
+	#def task
+	#	task = @task
+	#end
+#		
+#	else
+#		done_at = ""
+#		puts "HAYYYY NO CAMPIO COmpleted"
+#		puts status
+#	end
+
+
+#
+#
+
+
+
+# define_attribute_methods :status
+
+# def initialize
+#   @status= nil
+# end
+
+# def status
+#   @status
+# end
+
+# def status=(val)
+#   statuswill_change! unless val == @status
+#   @status = val
+# end
+
+

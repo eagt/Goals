@@ -5,13 +5,13 @@ class ListsController < ApplicationController
   before_action :set_list, only: [:show, :edit, :update , :destroy]
   before_action :set_list_deadline_time_new, only: [:new]
   before_action :set_list_deadline, only: [:show, :edit]
+  #before_action :set_task, only: [:show]
  
   def index
     @lists = current_user.lists.all
   end
 
-  def show
-   
+  def show   
   end
 
   def new
@@ -66,6 +66,7 @@ class ListsController < ApplicationController
     end
   end
 
+
   private
   
     def set_list
@@ -99,6 +100,13 @@ class ListsController < ApplicationController
        @list.status = @list.tasks.average(:status_value).to_f.round
       end
     end
+
+  #  def set_task      
+  #    @task = @list.tasks.find(params[:id])#.status
+  #    @taskd = @list.tasks.find(params[:id])#.done_at
+  #  end
+  ##  
+
 
 
     def list_params
