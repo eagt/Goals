@@ -47,12 +47,8 @@
       	    <td class="showStatus"><%= task.status.split.map(&:capitalize)*' ' %></td>  
             <td class='showStatusValue'><%= task.status_value%></td> 
             <td><%= task.created_at.strftime('%d %b %Y %H:%M') %></td>     
-            <td class="showDeadline"><%= task.deadline_at.strftime('%d %b %Y %H:%M') %></td>
-            <% if task.status == "Completed" %>
-              <td class="showDoneAt"><%= task.done_at.strftime('%d %b %Y %H:%M') %></td>
-            <% else %>
-              <td class="showDoneAt"><%= ""%></td>
-            <%end %> 
+            <td class="showDeadline"><%= task.deadline_at.strftime('%d %b %Y %H:%M') %></td>            
+            <%= render 'show_hide_fineshed_on', task: task %>
           </tr>
         <% end %>
       </tbody>

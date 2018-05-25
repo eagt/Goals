@@ -1,6 +1,5 @@
 class Task < ApplicationRecord
  
-include ActiveModel::Dirty
 
 belongs_to :list, optional: true
 
