@@ -1,3 +1,18 @@
+---------Trying to pass local variables to partials
+<!--
+  <% #if task.status == "Completed" %>
+      <%#= task.done_at.strftime('%d %b %Y %H:%M') %>    
+  <%# else %>
+  <%#= ""%>
+  <% #end %> -->
+<!-- task.done_at.strftime('%d %b %Y %H:%M')-->
+
+
+===========================
+
+
+
+
 THIS WILL ALING BUT DOESN'T SHOW THE PROGRESS BAR 
 
 

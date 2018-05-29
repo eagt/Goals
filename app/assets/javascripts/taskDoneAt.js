@@ -7,7 +7,7 @@
         var strCompleted = jQuery.inArray("Completed", array)
         var trs = $('.tasks tr').length
 		if( trs > 0 && strCompleted != -1 ){
-			
+			// Do nothing
 		}else{
 			console.log ("It isn't")
 			$(".fineshedOn").hide()

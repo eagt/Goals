@@ -26,23 +26,34 @@
         </li>
         <% end %>
       <!--< /ul> -->
-
-   <!-- <div class="d-flex justify-content-end" >  -->          
-        <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to 'Edit User', edit_user_registration_path, class: "nav-link #{yield(:edit_user_active)}" %>
-          </li>                
-          <li class="nav-item">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete,class: "nav-link" %>
-          </li> 
-        <% else %>
+     
+      
+<!-- <div class="d-flex justify-content-end" >  -->          
+      <% if user_signed_in? %>
+<!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if !current_user.first_name.blank? %>    
+            <%= current_user.first_name%>      
+          <% else %>
+            <%= current_user.email%> 
+          <% end %> 
+          <%#= render 'navbar_usersigned_in_logic', current_user: current_use CHECK HOW TO MOVE IT TO A PARTIAL%>
+        </a>      
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to 'Edit User', edit_user_registration_path, class: "nav-link #{yield(:edit_user_active)}" %>
+           <%= link_to "Logout", destroy_user_session_path, method: :delete,class: "nav-link" %>
+        </div>
+      </li>
+<!-- Dropdown -->         
+      <% else %>
            <li class="nav-item">
          <%= link_to 'Sing up', new_user_registration_path, class: "nav-link #{yield(:sign_up_active)}" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Sing in', new_user_session_path, class: "nav-link #{yield(:sign_in_active)}" %>
         </li>
-        <% end %>  
+      <% end %>  
       </ul>        
     </div>      
 </nav>

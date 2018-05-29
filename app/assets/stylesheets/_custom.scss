@@ -31,7 +31,7 @@ td.statusValue {
 }
 
 tr.nested-fields {
-    background-color: #fcfff4;
+    background-color: #f8fffe;
 }
 
 .btn-danger {
@@ -135,4 +135,7 @@ button.showCompletedTasks, .showCompletedLists {
     background-color: #bdf5ce;
     color: #070707;
 }
-    
+   
+.shTasks td {
+    max-width: 450px;
+} 

@@ -9,7 +9,6 @@ validate :deadeline_cannot_be_in_the_past
 validate :set_done_at
 
 
-
 # Sort tasks by sooner first (deadline_at)  
 default_scope {order(:deadline_at)} 
 

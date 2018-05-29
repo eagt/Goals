@@ -1,0 +1,44 @@
+<% if !current_user.first_name.blank? && current_user.first_name.present? %>
+    <!-- dropdown -->
+          <%= current_user.first_name%>               
+      
+        <% else %>
+          <%= current_user.email%>               
+            
+          </li>
+
+        <% end %> 
+  <!-- dropdown -->
+
+
+
+
+<!-- 
+   <%#= link_to 'Edit User', edit_user_registration_path, class: "nav-link #{yield(:edit_user_active)}" %>
+         <%#= link_to "Logout", destroy_user_session_path, method: :delete,class: "nav-link" %>
+
+  
+       <li class="nav-item">
+     <%#= link_to 'Sing up', new_user_registration_path, class: "nav-link #{yield(:sign_up_active)}" %>
+    </li>
+    <li class="nav-item">
+      <%#= link_to 'Sing in', new_user_session_path, class: "nav-link #{yield(:sign_in_active)}" %>
+    </li> -->
+
+
+  
+
+  <!--    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= @current_user.email%>               
+      </a>
+  <%# else %>
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%#= @current_user.name%>               
+      </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        
+      </div>
+    </li>
+
+     <%# end %> 
+dropdown -->
+
