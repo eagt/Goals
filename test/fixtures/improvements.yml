@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  improvement: MyText
+  reply: MyText
+  status: MyString
+  status_value: 1
+  set_at: 2018-07-20 12:23:31
+  done_at: 2018-07-20 12:23:31
+
+two:
+  user: two
+  improvement: MyText
+  reply: MyText
+  status: MyString
+  status_value: 1
+  set_at: 2018-07-20 12:23:31
+  done_at: 2018-07-20 12:23:31

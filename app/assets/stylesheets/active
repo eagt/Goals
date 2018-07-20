@@ -5,7 +5,7 @@
 
 a.btn.btn-back {
     background-color: #0d0d0dd4;
-    color: #ffffffed;
+    color: #ffffffed
 }
 
 input#user_remember_me {

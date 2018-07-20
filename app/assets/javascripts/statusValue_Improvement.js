@@ -1,7 +1,7 @@
 (function($) {	
     $(document).on('change', '.status', function() {
 	    var status = $(this).val(),
-	    node_to_change = $(this).closest('.nested-fields').find('.statusValue'); 
+	    node_to_change = $(this).closest('.tr-improve-fields').find('.statusValue'); 
 	    
 	      if(status == 'In Progress')      
 	        node_to_change.val(50)
@@ -11,4 +11,3 @@
 	              
 	    });	 
 })(jQuery);
-
