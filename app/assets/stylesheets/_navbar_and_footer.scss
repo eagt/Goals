@@ -2,7 +2,7 @@
   min-height: 55px; // Changed from  height: 55px; as it was making the tabes to look wider than navbar
   border-radius: 0;
   margin-bottom: 0px;        
-  background-color: #71e6c1;
+  background-color: #71e6c1; //navbar-bg-color
      
       .navbar-brand {
           font-weight: bolder;
@@ -35,7 +35,8 @@
    height: 70px;
    bottom: 0;
    width: 100%;
-   background-color: #7d8bf2;
+   background-color: #71e6c1;
+   color: #007bff; // blue-logo
    left: 0;
    right: 0;
     

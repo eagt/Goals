@@ -33,9 +33,7 @@ module SimpleNest
 	  enable_starttls_auto: true,
 	  domain: 'gmail.com'  # Added to see if it will work after a block by Google
 
-	  }
-
-	  
+	  }	  
   end
 end
 # I will leave it for a while and see if it works
