@@ -2,50 +2,51 @@
 <% provide(:improvements_active, 'active') %>
 
 <div class="container">
-<h3>Improvements</h3>
-<br>
-<p class="improvement-intro"> So this is the place where we all can add our suggestions for the better of <b><i>Listis</i></b> and check their current status. See what others have suggested they wish <b><i>Listis</i></b> could have to add value for the better of the community. Feel free to add a suggestion and vote for one more suggestion apart from yours. We'll do our best to implement the suggestion voted higher on each month if circumstances allow us. Bear in mind we strive for the notion Less is More...
-</p>
-<br>
-<br>
-<a>
-<%= link_to new_improvement_path do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Improvements</button>
-</a>
-<br>
-<br>
-<div class="table-responsive">
-<table class='table'>
-  <thead>
-    <tr>
-      <th>Improvement</th> 
-      <th>Listis' Reply</th>       
-      <th>Status</th>  
-      <th>Status Value</th> 
-      <th>Set On</th> 
-      <th>Fineshed On</th>       
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody class="improvements">
-    <% @improvements.each do |improvement| %>
+  <h3>Improvements</h3>
+  <br>
+  <p class="improvement-intro"> So this is the place where we all can add our suggestions for the better of <b><i>Listis</i></b> and check their current status. See what others have suggested they wish <b><i>Listis</i></b> could have to add value for the better of the community. Feel free to add a suggestion and vote for one more suggestion apart from yours. We'll do our best to implement the suggestion voted higher on each month if circumstances allow us. Bear in mind we strive for the notion Less is More...
+  </p>
+  <br>
+  <br>
+  <a>
+  <%= link_to new_improvement_path do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Improvements</button>
+  </a>
+  <br>
+  <br>
+  <div class="table-responsive">
+  <table class='table'>
+    <thead>
       <tr>
-        <td><%= improvement.improvement(&:capitalize)%></td> 
-        <td><%= improvement.reply(&:capitalize)%></td> 
-        <td><%= improvement.status(&:capitalize)%></td> 
-        <td><%= improvement.status_value%></td> 
-        <td><%= improvement.created_at.strftime('%d %b %Y %H:%M') %></td>
-        <td><%#= improvement.done_at.strftime('%d %b %Y %H:%M') %></td> <!-- This will need some logic to make it work -->
-
-        <td><%= link_to improvement do %><i class="fa fa-binoculars"></i><% end %></td>
-        <td><%= link_to edit_improvement_path(improvement) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
-        <td><%= link_to improvement, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
+        <th>Improvement</th> 
+        <th>Listis' Reply</th>       
+        <th>Status</th>  
+        <th>Status Value</th> 
+        <th>Set On</th> 
+        <th>Fineshed On</th>       
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
-<hr>
-<br>
-<%= link_to new_improvement_path do%><i class="fa fa-plus"></i><% end %></td>
-
+    </thead>
+    <tbody class="improvements">
+      <% @improvements.each do |improvement| %>
+        <tr>
+          <td><%= improvement.improvement(&:capitalize)%></td> 
+          <td><%= improvement.reply(&:capitalize)%></td> 
+          <td><%= improvement.status(&:capitalize)%></td> 
+          <td><%= improvement.status_value%></td> 
+          <td><%= improvement.created_at.strftime('%d %b %Y %H:%M') %></td>
+          <td><%#= improvement.done_at.strftime('%d %b %Y %H:%M') %></td> <!-- This will need some logic to make it work -->
+          <% if user_signed_in? %>
+            <td><%= link_to improvement do %><i class="fa fa-binoculars"></i><% end %></td>
+            <td><%= link_to edit_improvement_path(improvement) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+            <td><%= link_to improvement, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %>
+          <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+  <hr>
+  <br>
+  <%= link_to new_improvement_path do%><i class="fa fa-plus"></i><% end %></td>
 </div>

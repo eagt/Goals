@@ -1,10 +1,10 @@
 class ImprovementsController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:index]
   before_action :set_improvement, only: [:show, :edit, :update , :destroy]
 
   def index
-    @improvements = current_user.improvements.all
+    @improvements = Improvement.all   
   end
 
   def show   
