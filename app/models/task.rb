@@ -2,11 +2,13 @@ class Task < ApplicationRecord
  
 
 belongs_to :list, optional: true
+belongs_to :user, optional: true
 
 validates :name, presence: true  
 validate :deadeline_cannot_be_in_the_past 
 
-validate :set_done_at
+#validate :set_done_at
+after_save :set_done_at
 
 
 # Sort tasks by sooner first (deadline_at)  
@@ -20,15 +22,10 @@ default_scope {order(:deadline_at)}
 		end
 	end
 
-# Setting done_at depending of task.status
+# Setting done_at depending of task.status Missing ALOT
 	def set_done_at
-		if self.status == "Completed"			
+		if status_changed? && self.status == "Completed"			
 		   self.done_at = DateTime.now	
-		else				
-		   self.done_at = blank?
 		end
 	end
 end
-
-
-
