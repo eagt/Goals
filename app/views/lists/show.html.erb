@@ -55,8 +55,8 @@
     </table>
     <hr>
     <br>
-    <%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td> |
-    <%= link_to edit_list_path(@list) do %><i class="fa fa-pencil-square-o"></i><% end %>
+    <%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}   do%><i class="fa fa-arrow-left"></i><% end %></td> |
+    <%= link_to edit_list_path(@list), data: { toggle: 'tooltip', title: 'Edit List'} do %><i class="fa fa-pencil-square-o"></i><% end %>
     </div>
   </div>
 </div>

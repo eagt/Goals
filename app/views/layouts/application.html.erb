@@ -23,22 +23,14 @@
     <%= render 'layouts/flash_notice_alert' %>
 
     <%= yield %>
-
-      <!-- Code below is used for the tooltips -->
-   <!--  <script> 
-      $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
-        animation: true,
-        delay: {show:100, hide:200}   
-      });
-    </script>-->
-    
-    <%#= javascript_pack_tag 'application' %> 
-   
-   
-  <%# The links below may NOT be needed %>
     </div>
-    <br><br><br><br> <br><br> 
     <%= render 'layouts/footer.html.erb' %>
+    
+    <script>
+      ( function($) {
+       $('[data-toggle="tooltip"]').tooltip()
+      })(jQuery)
+    </script>
   </body>
+
 </html>

@@ -5,5 +5,5 @@
 	<br>
 	<%= render 'form', list: @list %>
 	<br>
-	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td>
+	<%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}  do%><i class="fa fa-arrow-left"></i><% end %></td>
 </div>

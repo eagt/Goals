@@ -6,7 +6,7 @@
 <br>
 <br>
 <a>
-<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Lists</button>
+<%= link_to new_list_path, data: {toggle: 'tooltip', title: 'Create New List'} do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Lists</button>
 </a>
 <br>
 <br>
@@ -30,9 +30,9 @@
         <td><%= list.created_at.strftime('%d %b %Y %H:%M') %></td>
         <td><%= list.deadline_at.strftime('%d %b %Y %H:%M') %></td>
         <td class="date"><%= list.updated_at.strftime('%d %b %Y %H:%M') %></td>      
-        <td><%= link_to list do %><i class="fa fa-binoculars"></i><% end %></td>
-        <td><%= link_to edit_list_path(list) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
-        <td><%= link_to list, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
+        <td><%= link_to list, data: { toggle: 'tooltip', title: 'Show List'} do %><i class="fa fa-binoculars"></i><% end %></td>
+        <td><%= link_to edit_list_path(list), data: { toggle: 'tooltip', title: 'Edit List'}  do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+        <td><%= link_to list, method: :delete, data: { confirm: 'Are you sure?', toggle: 'tooltip', title: 'Delete' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
       </tr>
     <% end %>
   </tbody>
@@ -40,8 +40,6 @@
 </div>
 <hr>
 <br>
-<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %></td>
-
+<%= link_to new_list_path, data: { toggle: 'tooltip', title: 'Create New List'} do%><i class="fa fa-plus"></i><% end %></td>
 </div>
-
 

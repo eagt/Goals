@@ -6,6 +6,7 @@
 
 	<%= render 'form', list: @list %>
 	<hr>
-	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %> |
-	<%= link_to @list do %><i class="fa fa-binoculars"></i><% end %>
+	<%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}   do%><i class="fa fa-arrow-left"></i><% end %> |
+	<%= link_to @list, data: { toggle: 'tooltip', title: 'Show List'} do %><i class="fa fa-binoculars"></i><% end %>
 </div>
+

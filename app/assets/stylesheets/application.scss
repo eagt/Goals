@@ -1,10 +1,19 @@
-@import "bootstrap";
+@import "pages";
 @import "_navbar_and_footer";
 @import "_custom";
 @import "font-awesome";
 @import "_custom-font-awesome";
 @import "_sign_and_edit_cards";
 @import "_alert_and_notices.scss";
+@import "form_messages";
 @import "_homepage.scss";
 @import "improvements.scss";
+@import "bootstrap";
+
+
+:root {    
+    --main-color: #007bff; // blue  
+    --main-bg-color: #71e6c1; // green
+}
+
 

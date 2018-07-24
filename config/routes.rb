@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :form_messages
 root 'pages#home'
 get 'contact' => 'pages#contact'
 

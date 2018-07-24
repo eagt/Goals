@@ -9,7 +9,7 @@
 		if( trs > 0 && strCompleted != -1 ){
 			// Do nothing
 		}else{
-			console.log ("It isn't")
+			//console.log ("It isn't") test
 			$(".fineshedOn").hide()
 			$(".showDoneAt").hide()
 		}

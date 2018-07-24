@@ -1,6 +1,6 @@
 <tr class="nested-fields"> 
-    <td>
-      <%= link_to_remove_association f do%><i class="fa fa-trash" aria-hidden="true" id="removeTask"></i><% end %>
+    <td>      
+      <%= link_to_remove_association f, data: { title: 'Delete Task', toggle: 'tooltip'} do%><i class="fa fa-trash" aria-hidden="true" id="removeTask" ></i><% end %>  
     </td>
     <td><%= f.input :name, as: :text, label: false %></td>
     <td><%= f.input :status, input_html: { class: 'status'}, label: false, :collection => ['Created', 'In Progress', 'Completed'], :include_blank => false %></td>      
@@ -10,5 +10,5 @@
     <td style="display:none"><%= f.hidden_field :last_updated, value: DateTime.current, :order => [:day, :month, :year] %></td>
     <td style="display:none"><%= f.input :status_value, :as => :hidden, label: false, input_html: { class: 'statusValue', value: f.object.status_value || '0'}  %></td> <!-- value: f.object.status_value || '0', is used to set the default value to 0. -->    
 </tr>
-
+<!-- Needed to be placed here in order to delete icon to work -->
 
