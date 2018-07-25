@@ -1,10 +1,15 @@
 class FormMessagesController < ApplicationController
   before_action :set_form_message, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:new, :create]
 
   # GET /form_messages
   # GET /form_messages.json
   def index
-    @form_messages = FormMessage.all
+    if current_user && current_user.admin == false     
+      redirect_to pages_unauthorised_path
+    else
+      @form_messages = FormMessage.all       
+    end
   end
 
   # GET /form_messages/1

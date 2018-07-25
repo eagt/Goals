@@ -5,6 +5,8 @@ class PagesController < ApplicationController
   def contact
   end
 
-  #def community
- # end
+  def unauthorised
+  end
+  
 end
+
