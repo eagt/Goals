@@ -18,7 +18,7 @@
           <%= link_to 'Home', root_path, class: "nav-link #{yield(:home_active)}" %>  <!--pages_home_path -->
         </li>
         <li class="nav-item">
-          <%= link_to 'Contact', contact_path, class: "nav-link #{yield(:contact_active)}" %>
+          <%= link_to 'Contact', new_form_message_path, class: "nav-link #{yield(:contact_active)}" %>
         </li>        
         <li class="nav-item">
           <%= link_to 'Improvements', improvements_path, class: "nav-link #{yield(:improvements_active)}" %>
