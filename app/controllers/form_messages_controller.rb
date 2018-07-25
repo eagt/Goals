@@ -25,11 +25,11 @@ class FormMessagesController < ApplicationController
   # POST /form_messages.json
   def create
     @form_message = FormMessage.new(form_message_params)
-
     respond_to do |format|
       if @form_message.save
+       # ContactQueryMailer.new_contact_query(@form_message).deliver_now
         format.html { redirect_to root_path, notice: 'Thanks for contacting us. We’ll get back to you in the next 12 hours.' }
-        format.json { render :root, status: :created, location: root_path }
+        format.json { render :root, status: :created, location: @form_message}
       else
         format.html { render :new }
         format.json { render json: @form_message.errors, status: :unprocessable_entity }
@@ -69,6 +69,6 @@ class FormMessagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_message_params
-      params.require(:form_message).permit(:name, :email, :company, :subject, :phone, :body)
+      params.require(:form_message).permit(:name, :email, :company, :subject, :phone, :body, :teleno)
     end
 end

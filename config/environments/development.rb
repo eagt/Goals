@@ -29,9 +29,6 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-
   # Setting required by devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
@@ -60,11 +57,14 @@ Rails.application.configure do
 
   #config.generators.assets = false
 
-  # Setting required by devise
+  # Setting required by devise and Action Mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.delivery_method = :smtp
  
   config.action_mailer.perform_deliveries = true
+  
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
 
 
 end
