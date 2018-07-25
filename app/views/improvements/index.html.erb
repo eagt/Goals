@@ -35,7 +35,7 @@
           <td><%= improvement.status_value%></td> 
           <td><%= improvement.created_at.strftime('%d %b %Y %H:%M') %></td>
           <td><%#= improvement.done_at.strftime('%d %b %Y %H:%M') %></td> <!-- This will need some logic to make it work -->
-          <% if user_signed_in? %>
+          <% if improvement.user == current_user %>
             <td><%= link_to improvement do %><i class="fa fa-binoculars"></i><% end %></td>
             <td><%= link_to edit_improvement_path(improvement) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
             <td><%= link_to improvement, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %>
