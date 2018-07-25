@@ -1,0 +1,1972 @@
+diff --git a/app/assets/javascripts/application.js b/app/assets/javascripts/application.js
+index 13f69e9..97a933a 100644
+--- a/app/assets/javascripts/application.js
++++ b/app/assets/javascripts/application.js
+@@ -1,4 +1,3 @@
+-
+ // This is a manifest file that'll be compiled into application.js, which will include all the files
+ // listed below.
+ //
+@@ -12,11 +11,10 @@
+ // about supported directives.
+ //
+ //= require rails-ujs 
++//= require jquery
+ // Bootstrap tooltips and popovers depend on popper.js for positioning
+-//= require jquery3
+ //= require popper
+-//= require bootstrap-sprockets
+ //= require turbolinks
+ //= require bootstrap
+ //= require cocoon
+-//= require_tree .
+\ No newline at end of file
++//= require_tree .
+diff --git a/app/assets/javascripts/form_messages.coffee b/app/assets/javascripts/form_messages.coffee
+deleted file mode 100644
+index 24f83d1..0000000
+--- a/app/assets/javascripts/form_messages.coffee
++++ /dev/null
+@@ -1,3 +0,0 @@
+-# Place all the behaviors and hooks related to the matching controller here.
+-# All this logic will automatically be available in application.js.
+-# You can use CoffeeScript in this file: http://coffeescript.org/
+diff --git a/app/assets/javascripts/taskDoneAt.js b/app/assets/javascripts/taskDoneAt.js
+index 94ceab2..2184f79 100644
+--- a/app/assets/javascripts/taskDoneAt.js
++++ b/app/assets/javascripts/taskDoneAt.js
+@@ -9,7 +9,7 @@
+ 		if( trs > 0 && strCompleted != -1 ){
+ 			// Do nothing
+ 		}else{
+-			//console.log ("It isn't") test
++			console.log ("It isn't")
+ 			$(".fineshedOn").hide()
+ 			$(".showDoneAt").hide()
+ 		}
+diff --git a/app/assets/javascripts/tetsting b/app/assets/javascripts/tetsting
+index 96add44..231339a 100644
+--- a/app/assets/javascripts/tetsting
++++ b/app/assets/javascripts/tetsting
+@@ -1,18 +1,3 @@
+-//// Changing the class on removeTask for tooltips /////
+-
+-('#remove_fields).class()
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+ ///////// Checking DateTime is less than or equal to Current and status is different to Completed. If so  highlight the due Deadline ////
+ var d = new Date()
+ console.log (d)
+diff --git a/app/assets/stylesheets/_navbar_and_footer.scss b/app/assets/stylesheets/_navbar_and_footer.scss
+index 22d0c0f..934a48e 100644
+--- a/app/assets/stylesheets/_navbar_and_footer.scss
++++ b/app/assets/stylesheets/_navbar_and_footer.scss
+@@ -32,7 +32,7 @@
+ .footer {
+    margin-bottom: 0px; 
+    position: fixed; // new till width
+-   height: 40px;
++   height: 70px;
+    bottom: 0;
+    width: 100%;
+    background-color: #71e6c1;
+@@ -42,7 +42,7 @@
+     
+    p.text-center {
+     text-align: center !important;
+-    padding-top: 10px;
++    padding-top: 20px;
+     }
+ 
+ }
+diff --git a/app/assets/stylesheets/application.scss b/app/assets/stylesheets/application.scss
+index dd55d47..b8dd6e2 100644
+--- a/app/assets/stylesheets/application.scss
++++ b/app/assets/stylesheets/application.scss
+@@ -1,19 +1,10 @@
+-@import "pages";
++@import "bootstrap";
+ @import "_navbar_and_footer";
+ @import "_custom";
+ @import "font-awesome";
+ @import "_custom-font-awesome";
+ @import "_sign_and_edit_cards";
+ @import "_alert_and_notices.scss";
+-@import "form_messages";
+ @import "_homepage.scss";
+ @import "improvements.scss";
+-@import "bootstrap";
+-
+-
+-:root {    
+-    --main-color: #007bff; // blue  
+-    --main-bg-color: #71e6c1; // green
+-}
+-
+ 
+diff --git a/app/assets/stylesheets/form_messages.scss b/app/assets/stylesheets/form_messages.scss
+deleted file mode 100644
+index c3ca727..0000000
+--- a/app/assets/stylesheets/form_messages.scss
++++ /dev/null
+@@ -1,134 +0,0 @@
+-// Place all the styles related to the FormMessages controller here.
+-// They will automatically be included in application.css.
+-// You can use Sass (SCSS) here: http://sass-lang.com/
+-
+-
+-h3.contacth3 {
+-    text-align: center !important;
+-    margin-top: 10%;
+-    color:  var(--main-color);
+-}
+-/*a.nav-link.active.purple {
+-    color: #e800ff !important;
+-}*/
+-.orange {
+-  color:  #bd9412 !important;
+-}
+-p.contact {
+-    color: var(--main-color);
+-    margin-bottom: 3rem !important; 
+-}
+-form#new_form_message {
+-    justify-content: center !important;
+-    padding-left: 1%;
+-    padding-right: 1%;
+-    padding-top: 4%;
+-    margin-left: 20%;
+-    margin-right: 20%;
+-}
+-.send {
+-    margin-bottom: 1% !important;
+-    margin-top: 10% !important;
+-    color: #fff;
+-    background-color: var(--main-color) !important;
+-    border-color: var(--main-color) !important;
+-}
+-abbr[title], abbr[data-original-title] {
+-    text-decoration: none !important;
+-}
+-.simple_form label {
+-    color: var(--main-color) !important;
+-}
+-.form-control {
+-  border-bottom: 1px solid var(--main-color) !important;
+-  border-top-color: white !important;  
+-  border-right-color: white !important;
+-  border-left-color: white !important;
+-  border-radius: 0rem !important;
+-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+-  //box-shadow: 0px 1px 0px 0px #ddc0ff;
+-}
+-.hidden { 
+-display: none; 
+-}
+-
+-.btn:not(:disabled):not(.disabled) {
+-   margin-bottom: 8%;
+-}
+-.btn-back{
+-    color: var(--main-color) !important;
+-    background-color: white !important;
+-    background-image: none;
+-    border-color: var(--main-color) !important;
+-    margin-top: 4% !important;
+-
+-}
+-
+-.btn-back:hover {
+-    background-color: var(--main-color) !important;
+-    border-color: #5e4f7e;
+-    color : #3bff00 !important;
+-}
+-
+-/*------Index Form messages ------*/
+-.container-index {
+-    margin-left: 5%;
+-    margin-right: 5%;
+-    margin-top: 5%;
+-    margin-bottom: 5%;
+-    overflow: auto;
+-}
+-/*---Media Queries --*/
+-@media (min-width: 1100px) and (orientation: landscape){
+-  .centered {
+-      top: 75% !important;
+-  }
+-}
+-@media (min-width: 1020px) { 
+-  div#notice {
+-    font-size: 95% !important;
+-  }
+-}
+-@media (max-width: 992px) {
+-  div#notice {
+-    font-size: 80%;
+-  }
+-}
+-@media (max-width: 764px) {  
+-   
+-}
+-@media (max-width: 731px)  and (orientation : landscape){
+-  div#notice {
+-    font-size: 80%;
+-  }
+-}
+-@media (max-width: 667px)  and (orientation : landscape){ 
+-  div#notice {
+-    font-size: 79%;
+-  }
+-}
+-@media (min-width: 576px){
+-    .col-sm-6 {
+-    flex: 0 0 50%;
+-    max-width: 50%;
+-    }
+-    div#notice {
+-    font-size: 70%;
+-  }
+-}
+-@media (max-width: 414px) and (orientation : portrait) { 
+-  div#notice {
+-    font-size: 80%;
+-}
+- 
+-}
+-@media (max-width: 375px) and (orientation : portrait) { 
+-  div#notice {
+-    font-size: 55%;
+-  }
+-}
+-@media (max-width: 360px) and (orientation : portrait) {  
+-  div#notice {
+-    font-size: 60%;
+-  }
+-}
+\ No newline at end of file
+diff --git a/app/assets/stylesheets/pages.scss b/app/assets/stylesheets/pages.scss
+index ba3d69c..31cb8fb 100644
+--- a/app/assets/stylesheets/pages.scss
++++ b/app/assets/stylesheets/pages.scss
+@@ -1,8 +1,3 @@
+ // Place all the styles related to the Pages controller here.
+ // They will automatically be included in application.css.
+ // You can use Sass (SCSS) here: http://sass-lang.com/
+-
+-
+-.container.lists {
+-    margin-bottom: 2%;
+-}
+diff --git a/app/controllers/form_messages_controller.rb b/app/controllers/form_messages_controller.rb
+deleted file mode 100644
+index bdf3d5a..0000000
+--- a/app/controllers/form_messages_controller.rb
++++ /dev/null
+@@ -1,74 +0,0 @@
+-class FormMessagesController < ApplicationController
+-  before_action :set_form_message, only: [:show, :edit, :update, :destroy]
+-
+-  # GET /form_messages
+-  # GET /form_messages.json
+-  def index
+-    @form_messages = FormMessage.all
+-  end
+-
+-  # GET /form_messages/1
+-  # GET /form_messages/1.json
+-  def show
+-  end
+-
+-  # GET /form_messages/new
+-  def new
+-    @form_message = FormMessage.new
+-  end
+-
+-  # GET /form_messages/1/edit
+-  def edit
+-  end
+-
+-  # POST /form_messages
+-  # POST /form_messages.json
+-  def create
+-    @form_message = FormMessage.new(form_message_params)
+-    respond_to do |format|
+-      if @form_message.save
+-       # ContactQueryMailer.new_contact_query(@form_message).deliver_now
+-        format.html { redirect_to root_path, notice: 'Thanks for contacting us. We’ll get back to you in the next 12 hours.' }
+-        format.json { render :root, status: :created, location: @form_message}
+-      else
+-        format.html { render :new }
+-        format.json { render json: @form_message.errors, status: :unprocessable_entity }
+-      end
+-    end
+-  end
+-
+-  # PATCH/PUT /form_messages/1
+-  # PATCH/PUT /form_messages/1.json
+-  def update
+-    respond_to do |format|
+-      if @form_message.update(form_message_params)
+-        format.html { redirect_to @form_message, notice: 'Form message was successfully updated.' }
+-        format.json { render :show, status: :ok, location: @form_message }
+-      else
+-        format.html { render :edit }
+-        format.json { render json: @form_message.errors, status: :unprocessable_entity }
+-      end
+-    end
+-  end
+-
+-  # DELETE /form_messages/1
+-  # DELETE /form_messages/1.json
+-  def destroy
+-    @form_message.destroy
+-    respond_to do |format|
+-      format.html { redirect_to form_messages_url, notice: 'Form message was successfully destroyed.' }
+-      format.json { head :no_content }
+-    end
+-  end
+-
+-  private
+-    # Use callbacks to share common setup or constraints between actions.
+-    def set_form_message
+-      @form_message = FormMessage.find(params[:id])
+-    end
+-
+-    # Never trust parameters from the scary internet, only allow the white list through.
+-    def form_message_params
+-      params.require(:form_message).permit(:name, :email, :company, :subject, :phone, :body, :teleno)
+-    end
+-end
+diff --git a/app/helpers/form_messages_helper.rb b/app/helpers/form_messages_helper.rb
+deleted file mode 100644
+index c40d96b..0000000
+--- a/app/helpers/form_messages_helper.rb
++++ /dev/null
+@@ -1,2 +0,0 @@
+-module FormMessagesHelper
+-end
+diff --git a/app/mailers/application_mailer.rb b/app/mailers/application_mailer.rb
+index 918ee80..286b223 100644
+--- a/app/mailers/application_mailer.rb
++++ b/app/mailers/application_mailer.rb
+@@ -1,5 +1,4 @@
+ class ApplicationMailer < ActionMailer::Base
+-  default from: 'Listis <tesdeve@gmail.com>'
+-  default bcc: 'egartru@gmail.com'
+-  #layout 'mailer'
++  default from: 'from@example.com'
++  layout 'mailer'
+ end
+diff --git a/app/mailers/contact_query_mailer.rb b/app/mailers/contact_query_mailer.rb
+deleted file mode 100644
+index 7ea8496..0000000
+--- a/app/mailers/contact_query_mailer.rb
++++ /dev/null
+@@ -1,18 +0,0 @@
+-class ContactQueryMailer < ApplicationMailer
+-
+-  # Subject can be set in your I18n file at config/locales/en.yml
+-  # with the following lookup:
+-  #
+-  #   en.contact_query_mailer.new_contact_query.subject
+-  #
+-   def new_contact_query(form_message)
+-    @form_message = form_message  
+-# Frst will add the logo attachement // this was done on Solart site because there was a Logo     
+-# Then we capture the email of the persone that contacted us from the "form_message.email" (user's email who contacted us)
+-# Finally we add the email's subject we want our contacter to see on the email we'll send to them 
+-      #attachments.inline["Solart-logo.jpg"] = File.read("#{Rails.root}/app/assets/images/Solart-logo.jpg")    
+-      mail(to: @form_message.email, 
+-            subject: 'Thank you for contacting Solart') #reading the subject of the email
+-           
+-  end
+-end
+diff --git a/app/models/form_message.rb b/app/models/form_message.rb
+deleted file mode 100644
+index b1674af..0000000
+--- a/app/models/form_message.rb
++++ /dev/null
+@@ -1,8 +0,0 @@
+-class FormMessage < ApplicationRecord
+-	validates_presence_of :name, :email, :body
+-	validates_format_of :email, :with => /.+@.+\..+/i
+-
+-	# Bots fool
+-	attr_accessor :teleno
+-	validates :teleno, inclusion: { in:['']}
+-end
+diff --git a/app/views/contact_query_mailer/new_contact_query.html.erb b/app/views/contact_query_mailer/new_contact_query.html.erb
+deleted file mode 100644
+index a3c9528..0000000
+--- a/app/views/contact_query_mailer/new_contact_query.html.erb
++++ /dev/null
+@@ -1,33 +0,0 @@
+-<br>
+-<p>
+-	Dear <%= @form_message.name.capitalize %>, <!-- Gets the name from form -->
+-<br>
+-<p>
+-	Thank you very much for  getting intouch with us.
+-	<br>
+-	<br>
+-	We understand you require some information in regards to <i><%= @form_message.subject %></i>.
+-	<br>
+-	<br>
+-	We will get back to you within the next 12h. 
+-</p>
+-<br>
+-	Kind regards
+-<br>
+-<br>
+-	Antonio Garcia
+-<br>
+-	Director
+-<br>
+-<br>
+-<div class="row">
+-	<a class = 'navbar-brand' href='/'>List<span class = different '>is</span>	
+-	<p style="text-decoration:none" > 4B PARK CLOSE 
+-	<br>OX16 0SX 
+-	<br>BANBURY
+-	<br>UK
+-	</p> 
+-	<br>
+-	Phone: <a href="tel:07821263668">07821263668</a>	
+-</div>
+-
+diff --git a/app/views/contact_query_mailer/new_contact_query.text.erb b/app/views/contact_query_mailer/new_contact_query.text.erb
+deleted file mode 100644
+index 105f830..0000000
+--- a/app/views/contact_query_mailer/new_contact_query.text.erb
++++ /dev/null
+@@ -1,27 +0,0 @@
+-<!-- Put this on a table -->
+-
+-
+-	Dear <%= @form_message.name %> <!-- Gets the name from form -->
+-
+-
+-	Thank you very much for  getting intouch with us.
+-	
+-	We understand you require some information in regards to <%= @form_message.subject %>
+-	
+-	We will get back to you within the next 12h. 
+-
+-	Kind regards
+-
+-	Antonio Garcia
+-
+-	Director
+-
+-
+-	Listis
+-	4B PARK CLOSE 
+-	OX16 0SX 
+-	BANBURY
+-	UK
+-	
+-	telephone: 07821263668	
+-
+diff --git a/app/views/form_messages/_form.html.erb b/app/views/form_messages/_form.html.erb
+deleted file mode 100644
+index 3c85abd..0000000
+--- a/app/views/form_messages/_form.html.erb
++++ /dev/null
+@@ -1,19 +0,0 @@
+-<!-- This is the new Contact page -->
+-<% provide(:page_title, 'Contact') %>
+-<% provide(:contact_active, 'active') %>
+-<br>
+-<%= simple_form_for(@form_message, html: {class: 'form-horizontal justify-content-center'}, wrapper: :horizontal_form) do |f| %> 
+-  <p class="contact"><b>Note:</b> Fields marked with asterisk (*) MUST be completed </p>
+-  <%= f.input :name,  autofocus: true %>      
+-  <%= f.input :email %>     
+-  <%= f.input :company %>     
+-  <%= f.input :subject %>     
+-  <%= f.input :phone %>     
+-  <%= f.input :body, :label => "Message", as: :text %>
+-  <div class= "hidden">
+-    <%= f.input :teleno, :hint => 'Leave this field blank!', :placeholder => "For Bots Only! If you are a human leave this field blank!" %>
+-  </div>
+-  <div class="form-actions text-center">
+-    <button type="submit" class="btn btn-primary btn-lg send">Send</button>
+-  </div>
+-<% end %>
+diff --git a/app/views/form_messages/_form_message.json.jbuilder b/app/views/form_messages/_form_message.json.jbuilder
+deleted file mode 100644
+index 39e4161..0000000
+--- a/app/views/form_messages/_form_message.json.jbuilder
++++ /dev/null
+@@ -1,2 +0,0 @@
+-json.extract! form_message, :id, :name, :email, :company, :subject, :phone, :body, :created_at, :updated_at
+-json.url form_message_url(form_message, format: :json)
+diff --git a/app/views/form_messages/edit.html.erb b/app/views/form_messages/edit.html.erb
+deleted file mode 100644
+index 3cc2f03..0000000
+--- a/app/views/form_messages/edit.html.erb
++++ /dev/null
+@@ -1,6 +0,0 @@
+-<h1>Editing Form Message</h1>
+-
+-<%= render 'form', form_message: @form_message %>
+-
+-<%= link_to 'Show', @form_message %> |
+-<%= link_to 'Back', form_messages_path %>
+diff --git a/app/views/form_messages/index.html.erb b/app/views/form_messages/index.html.erb
+deleted file mode 100644
+index 47bdab0..0000000
+--- a/app/views/form_messages/index.html.erb
++++ /dev/null
+@@ -1,37 +0,0 @@
+-<p id="notice"><%= notice %></p>
+-
+-<h1>Form Messages</h1>
+-
+-<table>
+-  <thead>
+-    <tr>
+-      <th>Name</th>
+-      <th>Email</th>
+-      <th>Company</th>
+-      <th>Subject</th>
+-      <th>Phone</th>
+-      <th>Body</th>
+-      <th colspan="3"></th>
+-    </tr>
+-  </thead>
+-
+-  <tbody>
+-    <% @form_messages.each do |form_message| %>
+-      <tr>
+-        <td><%= form_message.name %></td>
+-        <td><%= form_message.email %></td>
+-        <td><%= form_message.company %></td>
+-        <td><%= form_message.subject %></td>
+-        <td><%= form_message.phone %></td>
+-        <td><%= form_message.body %></td>
+-        <td><%= link_to 'Show', form_message %></td>
+-        <td><%= link_to 'Edit', edit_form_message_path(form_message) %></td>
+-        <td><%= link_to 'Destroy', form_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-      </tr>
+-    <% end %>
+-  </tbody>
+-</table>
+-
+-<br>
+-
+-<%= link_to 'New Form Message', new_form_message_path %>
+diff --git a/app/views/form_messages/index.json.jbuilder b/app/views/form_messages/index.json.jbuilder
+deleted file mode 100644
+index ccf4cdd..0000000
+--- a/app/views/form_messages/index.json.jbuilder
++++ /dev/null
+@@ -1 +0,0 @@
+-json.array! @form_messages, partial: 'form_messages/form_message', as: :form_message
+diff --git a/app/views/form_messages/new.html.erb b/app/views/form_messages/new.html.erb
+deleted file mode 100644
+index 22e331f..0000000
+--- a/app/views/form_messages/new.html.erb
++++ /dev/null
+@@ -1,14 +0,0 @@
+-<!--<h1>New Form Message</h1>
+-
+-<%#= render 'form', form_message: @form_message %>
+-
+-<%#= link_to 'Back', form_messages_path %> -->
+-
+-
+-<div class="container">
+-	<h3 class="contacth3">Let us know how can we help you...</h3>
+-	<%= render 'form', form_message: @form_message %>
+-	<div class="text-center"><%= link_to "Back", root_path, :class => "btn btn-back btn-lg" %>
+-	</div>
+-	<br><br>
+-</div>
+diff --git a/app/views/form_messages/show.html.erb b/app/views/form_messages/show.html.erb
+deleted file mode 100644
+index 0d74e70..0000000
+--- a/app/views/form_messages/show.html.erb
++++ /dev/null
+@@ -1,34 +0,0 @@
+-<p id="notice"><%= notice %></p>
+-
+-<p>
+-  <strong>Name:</strong>
+-  <%= @form_message.name %>
+-</p>
+-
+-<p>
+-  <strong>Email:</strong>
+-  <%= @form_message.email %>
+-</p>
+-
+-<p>
+-  <strong>Company:</strong>
+-  <%= @form_message.company %>
+-</p>
+-
+-<p>
+-  <strong>Subject:</strong>
+-  <%= @form_message.subject %>
+-</p>
+-
+-<p>
+-  <strong>Phone:</strong>
+-  <%= @form_message.phone %>
+-</p>
+-
+-<p>
+-  <strong>Body:</strong>
+-  <%= @form_message.body %>
+-</p>
+-
+-<%= link_to 'Edit', edit_form_message_path(@form_message) %> |
+-<%= link_to 'Back', form_messages_path %>
+diff --git a/app/views/form_messages/show.json.jbuilder b/app/views/form_messages/show.json.jbuilder
+deleted file mode 100644
+index 2d9bd1d..0000000
+--- a/app/views/form_messages/show.json.jbuilder
++++ /dev/null
+@@ -1 +0,0 @@
+-json.partial! "form_messages/form_message", form_message: @form_message
+diff --git a/app/views/layouts/application.html.erb b/app/views/layouts/application.html.erb
+index ad95a1c..1f6ba41 100644
+--- a/app/views/layouts/application.html.erb
++++ b/app/views/layouts/application.html.erb
+@@ -23,14 +23,22 @@
+     <%= render 'layouts/flash_notice_alert' %>
+ 
+     <%= yield %>
++
++      <!-- Code below is used for the tooltips -->
++   <!--  <script> 
++      $(document).ready(function(){
++      $('[data-toggle="tooltip"]').tooltip();
++        animation: true,
++        delay: {show:100, hide:200}   
++      });
++    </script>-->
++    
++    <%#= javascript_pack_tag 'application' %> 
++   
++   
++  <%# The links below may NOT be needed %>
+     </div>
++    <br><br><br><br> <br><br> 
+     <%= render 'layouts/footer.html.erb' %>
+-    
+-    <script>
+-      ( function($) {
+-       $('[data-toggle="tooltip"]').tooltip()
+-      })(jQuery)
+-    </script>
+   </body>
+-
+ </html>
+diff --git a/app/views/lists/_form.html.erb b/app/views/lists/_form.html.erb
+index a26636f..ad0b691 100644
+--- a/app/views/lists/_form.html.erb
++++ b/app/views/lists/_form.html.erb
+@@ -9,7 +9,7 @@
+   <br>
+   <h4>Tasks</h4>
+   <!--<div class="card-block">
+-    <div class="table-responsive"> -->
++    <div class="table-responsive">-->
+     <div class="table-responsive-lg">
+       <table class='table'>
+         <thead>
+diff --git a/app/views/lists/_task_fields.html.erb b/app/views/lists/_task_fields.html.erb
+index b6cc768..db81923 100644
+--- a/app/views/lists/_task_fields.html.erb
++++ b/app/views/lists/_task_fields.html.erb
+@@ -1,6 +1,6 @@
+ <tr class="nested-fields"> 
+-    <td>      
+-      <%= link_to_remove_association f, data: { title: 'Delete Task', toggle: 'tooltip'} do%><i class="fa fa-trash" aria-hidden="true" id="removeTask" ></i><% end %>  
++    <td>
++      <%= link_to_remove_association f do%><i class="fa fa-trash" aria-hidden="true" id="removeTask"></i><% end %>
+     </td>
+     <td><%= f.input :name, as: :text, label: false %></td>
+     <td><%= f.input :status, input_html: { class: 'status'}, label: false, :collection => ['Created', 'In Progress', 'Completed'], :include_blank => false %></td>      
+@@ -10,5 +10,5 @@
+     <td style="display:none"><%= f.hidden_field :last_updated, value: DateTime.current, :order => [:day, :month, :year] %></td>
+     <td style="display:none"><%= f.input :status_value, :as => :hidden, label: false, input_html: { class: 'statusValue', value: f.object.status_value || '0'}  %></td> <!-- value: f.object.status_value || '0', is used to set the default value to 0. -->    
+ </tr>
+-<!-- Needed to be placed here in order to delete icon to work -->
++
+ 
+diff --git a/app/views/lists/edit.html.erb b/app/views/lists/edit.html.erb
+index e900881..9dc59af 100644
+--- a/app/views/lists/edit.html.erb
++++ b/app/views/lists/edit.html.erb
+@@ -6,7 +6,6 @@
+ 
+ 	<%= render 'form', list: @list %>
+ 	<hr>
+-	<%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}   do%><i class="fa fa-arrow-left"></i><% end %> |
+-	<%= link_to @list, data: { toggle: 'tooltip', title: 'Show List'} do %><i class="fa fa-binoculars"></i><% end %>
++	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %> |
++	<%= link_to @list do %><i class="fa fa-binoculars"></i><% end %>
+ </div>
+-
+diff --git a/app/views/lists/index.html.erb b/app/views/lists/index.html.erb
+index 4f422ee..36d15fd 100644
+--- a/app/views/lists/index.html.erb
++++ b/app/views/lists/index.html.erb
+@@ -6,7 +6,7 @@
+ <br>
+ <br>
+ <a>
+-<%= link_to new_list_path, data: {toggle: 'tooltip', title: 'Create New List'} do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Lists</button>
++<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %><button type="button" class="btn showCompletedLists active " data-toggle="button" role="button" aria-pressed="true" autocomplete="off">Hide Completed Lists</button>
+ </a>
+ <br>
+ <br>
+@@ -30,9 +30,9 @@
+         <td><%= list.created_at.strftime('%d %b %Y %H:%M') %></td>
+         <td><%= list.deadline_at.strftime('%d %b %Y %H:%M') %></td>
+         <td class="date"><%= list.updated_at.strftime('%d %b %Y %H:%M') %></td>      
+-        <td><%= link_to list, data: { toggle: 'tooltip', title: 'Show List'} do %><i class="fa fa-binoculars"></i><% end %></td>
+-        <td><%= link_to edit_list_path(list), data: { toggle: 'tooltip', title: 'Edit List'}  do %><i class="fa fa-pencil-square-o"></i><% end %></td>
+-        <td><%= link_to list, method: :delete, data: { confirm: 'Are you sure?', toggle: 'tooltip', title: 'Delete' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
++        <td><%= link_to list do %><i class="fa fa-binoculars"></i><% end %></td>
++        <td><%= link_to edit_list_path(list) do %><i class="fa fa-pencil-square-o"></i><% end %></td>
++        <td><%= link_to list, method: :delete, data: { confirm: 'Are you sure?' } do%><i class="fa fa-trash" aria-hidden="true"></i><% end %></td>
+       </tr>
+     <% end %>
+   </tbody>
+@@ -40,6 +40,8 @@
+ </div>
+ <hr>
+ <br>
+-<%= link_to new_list_path, data: { toggle: 'tooltip', title: 'Create New List'} do%><i class="fa fa-plus"></i><% end %></td>
++<%= link_to new_list_path do%><i class="fa fa-plus"></i><% end %></td>
++
+ </div>
+ 
++
+diff --git a/app/views/lists/new.html.erb b/app/views/lists/new.html.erb
+index be1fa67..4b7383e 100644
+--- a/app/views/lists/new.html.erb
++++ b/app/views/lists/new.html.erb
+@@ -5,5 +5,5 @@
+ 	<br>
+ 	<%= render 'form', list: @list %>
+ 	<br>
+-	<%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}  do%><i class="fa fa-arrow-left"></i><% end %></td>
++	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td>
+ </div>
+\ No newline at end of file
+diff --git a/app/views/lists/show.html.erb b/app/views/lists/show.html.erb
+index fc9acad..d6ac02d 100644
+--- a/app/views/lists/show.html.erb
++++ b/app/views/lists/show.html.erb
+@@ -55,8 +55,8 @@
+     </table>
+     <hr>
+     <br>
+-    <%= link_to lists_path, data: { toggle: 'tooltip', title: 'Back to Lists'}   do%><i class="fa fa-arrow-left"></i><% end %></td> |
+-    <%= link_to edit_list_path(@list), data: { toggle: 'tooltip', title: 'Edit List'} do %><i class="fa fa-pencil-square-o"></i><% end %>
++    <%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %></td> |
++    <%= link_to edit_list_path(@list) do %><i class="fa fa-pencil-square-o"></i><% end %>
+     </div>
+   </div>
+ </div>
+diff --git a/config/environments/development.rb b/config/environments/development.rb
+index 431deb1..be3ee97 100644
+--- a/config/environments/development.rb
++++ b/config/environments/development.rb
+@@ -29,6 +29,9 @@ Rails.application.configure do
+     config.cache_store = :null_store
+   end
+ 
++  # Don't care if the mailer can't send.
++  config.action_mailer.raise_delivery_errors = true
++
+   # Setting required by devise
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+ 
+@@ -57,14 +60,11 @@ Rails.application.configure do
+ 
+   #config.generators.assets = false
+ 
+-  # Setting required by devise and Action Mailer
++  # Setting required by devise
+   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+   config.action_mailer.delivery_method = :smtp
+  
+   config.action_mailer.perform_deliveries = true
+-  
+-  # Don't care if the mailer can't send.
+-  config.action_mailer.raise_delivery_errors = true
+ 
+ 
+ end
+diff --git a/config/initializers/.btn-back b/config/initializers/.btn-back
+deleted file mode 100644
+index 0178fd5..0000000
+--- a/config/initializers/.btn-back
++++ /dev/null
+@@ -1,439 +0,0 @@
+-# frozen_string_literal: true
+-
+-# Please do not make direct changes to this file!
+-# This generator is maintained by the community around simple_form-bootstrap:
+-# https://github.com/rafaelfranca/simple_form-bootstrap
+-# All future development, tests, and organization should happen there.
+-# Background history: https://github.com/plataformatec/simple_form/issues/1561
+-
+-# Uncomment this and change the path if necessary to include your own
+-# components.
+-# See https://github.com/plataformatec/simple_form#custom-components
+-# to know more about custom components.
+-# Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
+-
+-# Use this setup block to configure all options available in SimpleForm.
+-SimpleForm.setup do |config|
+-  # Default class for buttons
+-  config.button_class = 'btn'
+-
+-  # Define the default class of the input wrapper of the boolean input.
+-  config.boolean_label_class = 'form-check-label'
+-
+-  # How the label text should be generated altogether with the required text.
+-  config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
+-
+-  # Define the way to render check boxes / radio buttons with labels.
+-  config.boolean_style = :inline
+-
+-  # You can wrap each item in a collection of radio/check boxes with a tag
+-  config.item_wrapper_tag = :div
+-
+-  # Defines if the default input wrapper class should be included in radio
+-  # collection wrappers.
+-  config.include_default_input_wrapper_class = false
+-
+-  # CSS class to add for error notification helper.
+-  config.error_notification_class = 'alert alert-danger'
+-
+-  # Method used to tidy up errors. Specify any Rails Array method.
+-  # :first lists the first message for each field.
+-  # :to_sentence to list all errors for each field.
+-  config.error_method = :to_sentence
+-
+-  # add validation classes to `input_field`
+-  config.input_field_error_class = 'is-invalid'
+-  config.input_field_valid_class = 'is-valid'
+-
+-
+-  # vertical forms
+-  #
+-  # vertical default_wrapper
+-  config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical input for boolean
+-  config.wrappers :vertical_boolean, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
+-      bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'form-check-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # vertical input for radio buttons and check boxes
+-  config.wrappers :vertical_collection, item_wrapper_class: 'form-check', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical input for inline radio buttons and check boxes
+-  config.wrappers :vertical_collection_inline, item_wrapper_class: 'form-check form-check-inline', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical file input
+-  config.wrappers :vertical_file, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :readonly
+-    b.use :label
+-    b.use :input, class: 'form-control-file', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical multi select
+-  config.wrappers :vertical_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+-      ba.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-    end
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical range input
+-  config.wrappers :vertical_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label
+-    b.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-
+-  # horizontal forms
+-  #
+-  # horizontal default_wrapper
+-  config.wrappers :horizontal_form, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 col-form-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal input for boolean
+-  config.wrappers :horizontal_boolean, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper tag: 'label', class: 'col-sm-3' do |ba|
+-      ba.use :label_text
+-    end
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |wr|
+-      wr.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
+-        bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-        bb.use :label, class: 'form-check-label'
+-        bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-        bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-      end
+-    end
+-  end
+-
+-  # horizontal input for radio buttons and check boxes
+-  config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal input for inline radio buttons and check boxes
+-  config.wrappers :horizontal_collection_inline, item_wrapper_class: 'form-check form-check-inline', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal file input
+-  config.wrappers :horizontal_file, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal multi select
+-  config.wrappers :horizontal_multi_select, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
+-        bb.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-      end
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal range input
+-  config.wrappers :horizontal_range, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-
+-  # inline forms
+-  #
+-  # inline default_wrapper
+-  config.wrappers :inline_form, tag: 'span', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+-    b.optional :readonly
+-    b.use :label, class: 'sr-only'
+-
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # inline input for boolean
+-  config.wrappers :inline_boolean, tag: 'span', class: 'form-check flex-wrap justify-content-start mr-sm-2', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-check-label'
+-    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-
+-  # bootstrap custom forms
+-  #
+-  # custom input for boolean
+-  config.wrappers :custom_boolean, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox' do |bb|
+-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'custom-control-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  config.wrappers :custom_boolean_switch, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox-switch' do |bb|
+-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'custom-control-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # custom input for radio buttons and check boxes
+-  config.wrappers :custom_collection, item_wrapper_class: 'custom-control', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # custom input for inline radio buttons and check boxes
+-  config.wrappers :custom_collection_inline, item_wrapper_class: 'custom-control custom-control-inline', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # custom file input
+-  config.wrappers :custom_file, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper :custom_file_wrapper, tag: 'div', class: 'custom-file' do |ba|
+-      ba.use :input, class: 'custom-file-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :label, class: 'custom-file-label'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    end
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # custom multi select
+-  config.wrappers :custom_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+-      ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-    end
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # custom range input
+-  config.wrappers :custom_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label, class: 'form-control-label'
+-    b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-
+-  # Input Group - custom component
+-  # see example app and config at https://github.com/rafaelfranca/simple_form-bootstrap
+-  # config.wrappers :input_group, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-  #   b.use :html5
+-  #   b.use :placeholder
+-  #   b.optional :maxlength
+-  #   b.optional :minlength
+-  #   b.optional :pattern
+-  #   b.optional :min_max
+-  #   b.optional :readonly
+-  #   b.use :label, class: 'form-control-label'
+-  #   b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
+-  #     ba.optional :prepend
+-  #     ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-  #     ba.optional :append
+-  #   end
+-  #   b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-  #   b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  # end
+-
+-
+-  # Floating Labels form
+-  #
+-  # floating labels default_wrapper
+-  config.wrappers :floating_labels_form, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+-    b.optional :readonly
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-control-label'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # custom multi select
+-  config.wrappers :floating_labels_select, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :input, class: 'custom-select custom-select-lg', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-control-label'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-
+-  # The default wrapper to be used by the FormBuilder.
+-  config.default_wrapper = :vertical_form
+-
+-  # Custom wrappers for input types. This should be a hash containing an input
+-  # type as key and the wrapper that will be used for all inputs with specified type.
+-  config.wrapper_mappings = {
+-    boolean:       :vertical_boolean,
+-    check_boxes:   :vertical_collection,
+-    date:          :vertical_multi_select,
+-    datetime:      :vertical_multi_select,
+-    file:          :vertical_file,
+-    radio_buttons: :vertical_collection,
+-    range:         :vertical_range,
+-    time:          :vertical_multi_select
+-  }
+-
+-  # enable custom form wrappers
+-  # config.wrapper_mappings = {
+-  #   boolean:       :custom_boolean,
+-  #   check_boxes:   :custom_collection,
+-  #   date:          :custom_multi_select,
+-  #   datetime:      :custom_multi_select,
+-  #   file:          :custom_file,
+-  #   radio_buttons: :custom_collection,
+-  #   range:         :custom_range,
+-  #   time:          :custom_multi_select
+-  # }
+-end
+diff --git a/config/initializers/simple_form_bootstrap.rb b/config/initializers/simple_form_bootstrap.rb
+index 0178fd5..c7705e8 100644
+--- a/config/initializers/simple_form_bootstrap.rb
++++ b/config/initializers/simple_form_bootstrap.rb
+@@ -1,55 +1,10 @@
+-# frozen_string_literal: true
+-
+-# Please do not make direct changes to this file!
+-# This generator is maintained by the community around simple_form-bootstrap:
+-# https://github.com/rafaelfranca/simple_form-bootstrap
+-# All future development, tests, and organization should happen there.
+-# Background history: https://github.com/plataformatec/simple_form/issues/1561
+-
+-# Uncomment this and change the path if necessary to include your own
+-# components.
+-# See https://github.com/plataformatec/simple_form#custom-components
+-# to know more about custom components.
+-# Dir[Rails.root.join('lib/components/**/*.rb')].each { |f| require f }
+-
+ # Use this setup block to configure all options available in SimpleForm.
+ SimpleForm.setup do |config|
+-  # Default class for buttons
+-  config.button_class = 'btn'
+-
+-  # Define the default class of the input wrapper of the boolean input.
+-  config.boolean_label_class = 'form-check-label'
+-
+-  # How the label text should be generated altogether with the required text.
+-  config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
+-
+-  # Define the way to render check boxes / radio buttons with labels.
+-  config.boolean_style = :inline
+-
+-  # You can wrap each item in a collection of radio/check boxes with a tag
+-  config.item_wrapper_tag = :div
+-
+-  # Defines if the default input wrapper class should be included in radio
+-  # collection wrappers.
+-  config.include_default_input_wrapper_class = false
+-
+-  # CSS class to add for error notification helper.
+   config.error_notification_class = 'alert alert-danger'
++  config.button_class = 'btn btn-default'
++  config.boolean_label_class = nil
+ 
+-  # Method used to tidy up errors. Specify any Rails Array method.
+-  # :first lists the first message for each field.
+-  # :to_sentence to list all errors for each field.
+-  config.error_method = :to_sentence
+-
+-  # add validation classes to `input_field`
+-  config.input_field_error_class = 'is-invalid'
+-  config.input_field_valid_class = 'is-valid'
+-
+-
+-  # vertical forms
+-  #
+-  # vertical default_wrapper
+-  config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :vertical_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.use :placeholder
+     b.optional :maxlength
+@@ -57,334 +12,107 @@ SimpleForm.setup do |config|
+     b.optional :pattern
+     b.optional :min_max
+     b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical input for boolean
+-  config.wrappers :vertical_boolean, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
+-      bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'form-check-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # vertical input for radio buttons and check boxes
+-  config.wrappers :vertical_collection, item_wrapper_class: 'form-check', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
++    b.use :label, class: 'control-label'
+ 
+-  # vertical input for inline radio buttons and check boxes
+-  config.wrappers :vertical_collection_inline, item_wrapper_class: 'form-check form-check-inline', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.use :input, class: 'form-control'
++    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+   end
+ 
+-  # vertical file input
+-  config.wrappers :vertical_file, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :vertical_file_input, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.use :placeholder
+     b.optional :maxlength
+     b.optional :minlength
+     b.optional :readonly
+-    b.use :label
+-    b.use :input, class: 'form-control-file', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # vertical multi select
+-  config.wrappers :vertical_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+-      ba.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-    end
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
++    b.use :label, class: 'control-label'
+ 
+-  # vertical range input
+-  config.wrappers :vertical_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label
+-    b.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.use :input
++    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+   end
+ 
+-
+-  # horizontal forms
+-  #
+-  # horizontal default_wrapper
+-  config.wrappers :horizontal_form, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :vertical_boolean, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+     b.optional :readonly
+-    b.use :label, class: 'col-sm-3 col-form-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+ 
+-  # horizontal input for boolean
+-  config.wrappers :horizontal_boolean, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper tag: 'label', class: 'col-sm-3' do |ba|
+-      ba.use :label_text
++    b.wrapper tag: 'div', class: 'checkbox' do |ba|
++      ba.use :label_input
+     end
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |wr|
+-      wr.wrapper :form_check_wrapper, tag: 'div', class: 'form-check' do |bb|
+-        bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-        bb.use :label, class: 'form-check-label'
+-        bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-        bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-      end
+-    end
+-  end
+ 
+-  # horizontal input for radio buttons and check boxes
+-  config.wrappers :horizontal_collection, item_wrapper_class: 'form-check', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
++    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+   end
+ 
+-  # horizontal input for inline radio buttons and check boxes
+-  config.wrappers :horizontal_collection_inline, item_wrapper_class: 'form-check form-check-inline', tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :vertical_radio_and_checkboxes, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
++    b.use :label, class: 'control-label'
++    b.use :input
++    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+   end
+ 
+-  # horizontal file input
+-  config.wrappers :horizontal_file, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :horizontal_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.use :placeholder
+     b.optional :maxlength
+     b.optional :minlength
+-    b.optional :readonly
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+-
+-  # horizontal multi select
+-  config.wrappers :horizontal_multi_select, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
++    b.optional :pattern
++    b.optional :min_max
+     b.optional :readonly
+     b.use :label, class: 'col-sm-3 control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |bb|
+-        bb.use :input, class: 'form-control mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-      end
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+ 
+-  # horizontal range input
+-  config.wrappers :horizontal_range, tag: 'div', class: 'form-group row', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label, class: 'col-sm-3 form-control-label'
+-    b.wrapper :grid_wrapper, tag: 'div', class: 'col-sm-9' do |ba|
+-      ba.use :input, class: 'form-control-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-      ba.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
++      ba.use :input, class: 'form-control'
++      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+     end
+   end
+ 
+-
+-  # inline forms
+-  #
+-  # inline default_wrapper
+-  config.wrappers :inline_form, tag: 'span', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :horizontal_file_input, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.use :placeholder
+     b.optional :maxlength
+     b.optional :minlength
+-    b.optional :pattern
+-    b.optional :min_max
+-    b.optional :readonly
+-    b.use :label, class: 'sr-only'
+-
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
+-  # inline input for boolean
+-  config.wrappers :inline_boolean, tag: 'span', class: 'form-check flex-wrap justify-content-start mr-sm-2', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+     b.optional :readonly
+-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-check-label'
+-    b.use :error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.optional :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+-
++    b.use :label, class: 'col-sm-3 control-label'
+ 
+-  # bootstrap custom forms
+-  #
+-  # custom input for boolean
+-  config.wrappers :custom_boolean, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox' do |bb|
+-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'custom-control-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
++      ba.use :input
++      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+     end
+   end
+ 
+-  config.wrappers :custom_boolean_switch, tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :horizontal_boolean, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.optional :readonly
+-    b.wrapper :form_check_wrapper, tag: 'div', class: 'custom-control custom-checkbox-switch' do |bb|
+-      bb.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      bb.use :label, class: 'custom-control-label'
+-      bb.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-      bb.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-    end
+-  end
+ 
+-  # custom input for radio buttons and check boxes
+-  config.wrappers :custom_collection, item_wrapper_class: 'custom-control', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
+-    end
+-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
++    b.wrapper tag: 'div', class: 'col-sm-offset-3 col-sm-9' do |wr|
++      wr.wrapper tag: 'div', class: 'checkbox' do |ba|
++        ba.use :label_input
++      end
+ 
+-  # custom input for inline radio buttons and check boxes
+-  config.wrappers :custom_collection_inline, item_wrapper_class: 'custom-control custom-control-inline', tag: 'fieldset', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+-      ba.use :label_text
++      wr.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++      wr.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+     end
+-    b.use :input, class: 'custom-control-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+   end
+ 
+-  # custom file input
+-  config.wrappers :custom_file, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :horizontal_radio_and_checkboxes, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+-    b.use :placeholder
+-    b.optional :maxlength
+-    b.optional :minlength
+     b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper :custom_file_wrapper, tag: 'div', class: 'custom-file' do |ba|
+-      ba.use :input, class: 'custom-file-input', error_class: 'is-invalid', valid_class: 'is-valid'
+-      ba.use :label, class: 'custom-file-label'
+-      ba.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    end
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
+ 
+-  # custom multi select
+-  config.wrappers :custom_multi_select, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.optional :readonly
+-    b.use :label, class: 'form-control-label'
+-    b.wrapper tag: 'div', class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
+-      ba.use :input, class: 'custom-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+-    end
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  end
++    b.use :label, class: 'col-sm-3 control-label'
+ 
+-  # custom range input
+-  config.wrappers :custom_range, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-    b.use :html5
+-    b.use :placeholder
+-    b.optional :readonly
+-    b.optional :step
+-    b.use :label, class: 'form-control-label'
+-    b.use :input, class: 'custom-range', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.wrapper tag: 'div', class: 'col-sm-9' do |ba|
++      ba.use :input
++      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
++    end
+   end
+ 
+-
+-  # Input Group - custom component
+-  # see example app and config at https://github.com/rafaelfranca/simple_form-bootstrap
+-  # config.wrappers :input_group, tag: 'div', class: 'form-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
+-  #   b.use :html5
+-  #   b.use :placeholder
+-  #   b.optional :maxlength
+-  #   b.optional :minlength
+-  #   b.optional :pattern
+-  #   b.optional :min_max
+-  #   b.optional :readonly
+-  #   b.use :label, class: 'form-control-label'
+-  #   b.wrapper :input_group_tag, tag: 'div', class: 'input-group' do |ba|
+-  #     ba.optional :prepend
+-  #     ba.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-  #     ba.optional :append
+-  #   end
+-  #   b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback d-block' }
+-  #   b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
+-  # end
+-
+-
+-  # Floating Labels form
+-  #
+-  # floating labels default_wrapper
+-  config.wrappers :floating_labels_form, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :inline_form, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.use :placeholder
+     b.optional :maxlength
+@@ -392,48 +120,35 @@ SimpleForm.setup do |config|
+     b.optional :pattern
+     b.optional :min_max
+     b.optional :readonly
+-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-control-label'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.use :label, class: 'sr-only'
++
++    b.use :input, class: 'form-control'
++    b.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++    b.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
+   end
+ 
+-  # custom multi select
+-  config.wrappers :floating_labels_select, tag: 'div', class: 'form-label-group', error_class: 'form-group-invalid', valid_class: 'form-group-valid' do |b|
++  config.wrappers :multi_select, tag: 'div', class: 'form-group', error_class: 'has-error' do |b|
+     b.use :html5
+     b.optional :readonly
+-    b.use :input, class: 'custom-select custom-select-lg', error_class: 'is-invalid', valid_class: 'is-valid'
+-    b.use :label, class: 'form-control-label'
+-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+-    b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
++    b.use :label, class: 'control-label'
++    b.wrapper tag: 'div', class: 'form-inline' do |ba|
++      ba.use :input, class: 'form-control'
++      ba.use :error, wrap_with: { tag: 'span', class: 'help-block' }
++      ba.use :hint,  wrap_with: { tag: 'p', class: 'help-block' }
++    end
+   end
+-
+-
+-  # The default wrapper to be used by the FormBuilder.
++  # Wrappers for forms and inputs using the Bootstrap toolkit.
++  # Check the Bootstrap docs (http://getbootstrap.com)
++  # to learn about the different styles for forms and inputs,
++  # buttons and other elements.
+   config.default_wrapper = :vertical_form
+-
+-  # Custom wrappers for input types. This should be a hash containing an input
+-  # type as key and the wrapper that will be used for all inputs with specified type.
+   config.wrapper_mappings = {
+-    boolean:       :vertical_boolean,
+-    check_boxes:   :vertical_collection,
+-    date:          :vertical_multi_select,
+-    datetime:      :vertical_multi_select,
+-    file:          :vertical_file,
+-    radio_buttons: :vertical_collection,
+-    range:         :vertical_range,
+-    time:          :vertical_multi_select
++    check_boxes: :vertical_radio_and_checkboxes,
++    radio_buttons: :vertical_radio_and_checkboxes,
++    file: :vertical_file_input,
++    boolean: :vertical_boolean,
++    datetime: :multi_select,
++    date: :multi_select,
++    time: :multi_select
+   }
+-
+-  # enable custom form wrappers
+-  # config.wrapper_mappings = {
+-  #   boolean:       :custom_boolean,
+-  #   check_boxes:   :custom_collection,
+-  #   date:          :custom_multi_select,
+-  #   datetime:      :custom_multi_select,
+-  #   file:          :custom_file,
+-  #   radio_buttons: :custom_collection,
+-  #   range:         :custom_range,
+-  #   time:          :custom_multi_select
+-  # }
+ end
+diff --git a/config/routes.rb b/config/routes.rb
+index 7046c6d..4ea9d4b 100644
+--- a/config/routes.rb
++++ b/config/routes.rb
+@@ -1,6 +1,5 @@
+ Rails.application.routes.draw do
+ 
+-  resources :form_messages
+ root 'pages#home'
+ get 'contact' => 'pages#contact'
+ 
+diff --git a/db/migrate/20180724090730_create_form_messages.rb b/db/migrate/20180724090730_create_form_messages.rb
+deleted file mode 100644
+index ff80e10..0000000
+--- a/db/migrate/20180724090730_create_form_messages.rb
++++ /dev/null
+@@ -1,14 +0,0 @@
+-class CreateFormMessages < ActiveRecord::Migration[5.1]
+-  def change
+-    create_table :form_messages do |t|
+-      t.string :name
+-      t.string :email
+-      t.string :company
+-      t.string :subject
+-      t.string :phone
+-      t.text :body
+-
+-      t.timestamps
+-    end
+-  end
+-end
+diff --git a/db/schema.rb b/db/schema.rb
+index 4438a8f..4379713 100644
+--- a/db/schema.rb
++++ b/db/schema.rb
+@@ -10,18 +10,7 @@
+ #
+ # It's strongly recommended that you check this file into your version control system.
+ 
+-ActiveRecord::Schema.define(version: 20180724090730) do
+-
+-  create_table "form_messages", force: :cascade do |t|
+-    t.string "name"
+-    t.string "email"
+-    t.string "company"
+-    t.string "subject"
+-    t.string "phone"
+-    t.text "body"
+-    t.datetime "created_at", null: false
+-    t.datetime "updated_at", null: false
+-  end
++ActiveRecord::Schema.define(version: 20180723082450) do
+ 
+   create_table "improvements", force: :cascade do |t|
+     t.integer "user_id"
+diff --git a/test/controllers/form_messages_controller_test.rb b/test/controllers/form_messages_controller_test.rb
+deleted file mode 100644
+index 44c3b26..0000000
+--- a/test/controllers/form_messages_controller_test.rb
++++ /dev/null
+@@ -1,48 +0,0 @@
+-require 'test_helper'
+-
+-class FormMessagesControllerTest < ActionDispatch::IntegrationTest
+-  setup do
+-    @form_message = form_messages(:one)
+-  end
+-
+-  test "should get index" do
+-    get form_messages_url
+-    assert_response :success
+-  end
+-
+-  test "should get new" do
+-    get new_form_message_url
+-    assert_response :success
+-  end
+-
+-  test "should create form_message" do
+-    assert_difference('FormMessage.count') do
+-      post form_messages_url, params: { form_message: { body: @form_message.body, company: @form_message.company, email: @form_message.email, name: @form_message.name, phone: @form_message.phone, subject: @form_message.subject } }
+-    end
+-
+-    assert_redirected_to form_message_url(FormMessage.last)
+-  end
+-
+-  test "should show form_message" do
+-    get form_message_url(@form_message)
+-    assert_response :success
+-  end
+-
+-  test "should get edit" do
+-    get edit_form_message_url(@form_message)
+-    assert_response :success
+-  end
+-
+-  test "should update form_message" do
+-    patch form_message_url(@form_message), params: { form_message: { body: @form_message.body, company: @form_message.company, email: @form_message.email, name: @form_message.name, phone: @form_message.phone, subject: @form_message.subject } }
+-    assert_redirected_to form_message_url(@form_message)
+-  end
+-
+-  test "should destroy form_message" do
+-    assert_difference('FormMessage.count', -1) do
+-      delete form_message_url(@form_message)
+-    end
+-
+-    assert_redirected_to form_messages_url
+-  end
+-end
+diff --git a/test/fixtures/form_messages.yml b/test/fixtures/form_messages.yml
+deleted file mode 100644
+index c364cc7..0000000
+--- a/test/fixtures/form_messages.yml
++++ /dev/null
+@@ -1,17 +0,0 @@
+-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+-
+-one:
+-  name: MyString
+-  email: MyString
+-  company: MyString
+-  subject: MyString
+-  phone: MyString
+-  body: MyText
+-
+-two:
+-  name: MyString
+-  email: MyString
+-  company: MyString
+-  subject: MyString
+-  phone: MyString
+-  body: MyText
+diff --git a/test/mailers/contact_query_mailer_test.rb b/test/mailers/contact_query_mailer_test.rb
+deleted file mode 100644
+index 92f77ab..0000000
+--- a/test/mailers/contact_query_mailer_test.rb
++++ /dev/null
+@@ -1,12 +0,0 @@
+-require 'test_helper'
+-
+-class ContactQueryMailerTest < ActionMailer::TestCase
+-  test "new_contact_query" do
+-    mail = ContactQueryMailer.new_contact_query
+-    assert_equal "New contact query", mail.subject
+-    assert_equal ["to@example.org"], mail.to
+-    assert_equal ["from@example.com"], mail.from
+-    assert_match "Hi", mail.body.encoded
+-  end
+-
+-end
+diff --git a/test/mailers/previews/contact_query_mailer_preview.rb b/test/mailers/previews/contact_query_mailer_preview.rb
+deleted file mode 100644
+index 9283fbc..0000000
+--- a/test/mailers/previews/contact_query_mailer_preview.rb
++++ /dev/null
+@@ -1,10 +0,0 @@
+-# Preview all emails at http://localhost:3000/rails/mailers/contact_query_mailer
+-class ContactQueryMailerPreview < ActionMailer::Preview
+-
+-  # Preview this email at http://localhost:3000/rails/mailers/contact_query_mailer/new_contact_query
+-  #	def new_contact_query
+- 	#	form_message = FormMessage.last
+- 	#  ContactQueryMailer.new_contact_query(form_message)
+- 	#end
+-
+-end
+diff --git a/test/models/form_message_test.rb b/test/models/form_message_test.rb
+deleted file mode 100644
+index 913dd66..0000000
+--- a/test/models/form_message_test.rb
++++ /dev/null
+@@ -1,7 +0,0 @@
+-require 'test_helper'
+-
+-class FormMessageTest < ActiveSupport::TestCase
+-  # test "the truth" do
+-  #   assert true
+-  # end
+-end
+diff --git a/test/system/form_messages_test.rb b/test/system/form_messages_test.rb
+deleted file mode 100644
+index 923ee08..0000000
+--- a/test/system/form_messages_test.rb
++++ /dev/null
+@@ -1,9 +0,0 @@
+-require "application_system_test_case"
+-
+-class FormMessagesTest < ApplicationSystemTestCase
+-  # test "visiting the index" do
+-  #   visit form_messages_url
+-  #
+-  #   assert_selector "h1", text: "FormMessage"
+-  # end
+-end

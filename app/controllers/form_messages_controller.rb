@@ -27,7 +27,7 @@ class FormMessagesController < ApplicationController
     @form_message = FormMessage.new(form_message_params)
     respond_to do |format|
       if @form_message.save
-       # ContactQueryMailer.new_contact_query(@form_message).deliver_now
+        ContactQueryMailer.new_contact_query(@form_message).deliver_now
         format.html { redirect_to root_path, notice: 'Thanks for contacting us. We’ll get back to you in the next 12 hours.' }
         format.json { render :root, status: :created, location: @form_message}
       else
