@@ -1,0 +1,95 @@
+// Below is the code for the error message after an unathorised user try to get into the form_messages
+.margins {
+    //margin-top: 10%;
+    margin-bottom: 10%;
+}
+a.WrongUser {
+    font-size: 24px;
+    font-family: initial;
+}
+
+
+
+/*---Media Queries --*/
+@media (min-width: 1024px) and (orientation: landscape){
+  
+}
+@media (min-width: 1024px) and (orientation: portrait){
+  
+}
+
+@media (max-width: 1024px) and (orientation: portrait){
+  
+}
+@media (max-width: 1024px) and (orientation: landscape){
+  
+}
+@media (min-width: 1020px) {
+   
+}
+@media (max-width: 992px) {
+  
+}
+@media (max-width: 823px)  and (orientation : landscape){
+  
+}
+@media (max-width: 812px) and (orientation : portrait) { 
+  
+}
+@media (max-width: 768px) and (orientation : portrait) { 
+ 
+}
+@media (max-width: 764px) {  
+   
+}
+@media (max-width: 737px)  and (orientation : landscape){
+.margins {
+    margin-top: 0 !important;
+    margin-bottom: 10%;
+}
+  
+}
+
+@media (max-width: 640px)  and (orientation : landscape){
+  
+}
+
+@media (max-width: 576px) and (orientation : landscape) {
+  
+}
+@media (min-width: 576px) {
+  div#notice {
+    //font-size: 65% !important;
+}
+}
+@media (max-width: 414px) and (orientation : portrait) {   
+  	.center_about {
+    	top: 23% !important;
+	}
+	div#notice {
+    	font-size: 69% !important;
+	}
+
+}
+@media (max-width: 375px) and (orientation : portrait) { 
+    .center_about {
+    	top: 25% !important;
+	}
+	.alert-dismissible {
+    	padding-right: 2.5rem !important;
+	}
+}
+@media (max-width: 360px) and (orientation : portrait) {  
+	div#notice {
+	    font-size: 55% !important;
+	}
+	.alert-dismissible {
+	    padding-right: 2.5rem !important;
+	}
+}
+
+@media (max-width: 320px) and (orientation : portrait) {  
+   .center_about {
+    	top: 28% !important; 
+	}
+}

@@ -19,10 +19,10 @@
   <body>
 	  <%= render 'layouts/navbar' %> <%# As it is outside the container it will use the fullwidth %>
     <div class="container <%= controller_name %> <%= action_name %> "> <%#  controller_name &/or action_name will give the names of each one of them, this will be used for some refernces later %>
-    <br><br>
-    <%= render 'layouts/flash_notice_alert' %>
+      <br>
+      <%= render 'layouts/flash_notice_alert' %>
 
-    <%= yield %>
+      <%= yield %>
     </div>
     <%= render 'layouts/footer.html.erb' %>
     
