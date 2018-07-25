@@ -1,11 +1,8 @@
 // Below is the code for the error message after an unathorised user try to get into the form_messages
-.margins {
-    //margin-top: 10%;
-    margin-bottom: 10%;
-}
-a.WrongUser {
-    font-size: 24px;
-    font-family: initial;
+.upps {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 17%;
 }
 
 
@@ -31,30 +28,61 @@ a.WrongUser {
   
 }
 @media (max-width: 823px)  and (orientation : landscape){
+    .upps {
+        margin-top: 0% !important;
+        margin-bottom: 15% !important;
+        margin-left: 3% !important;
+    
+            h1 {
+                font-size: 150% !important;
+            }
+            h2{
+                font-size: 130% !important;
+            }
+    }
   
 }
 @media (max-width: 812px) and (orientation : portrait) { 
   
 }
 @media (max-width: 768px) and (orientation : portrait) { 
- 
+    .upps {
+        margin-top: 35%;
+        margin-bottom: 0% !important;
+        margin-left: 10% !important;
+    
+            h1 {
+                font-size: 180% !important;
+            }
+            h2{
+                font-size: 150% !important;
+            }
+    }
 }
 @media (max-width: 764px) {  
    
 }
 @media (max-width: 737px)  and (orientation : landscape){
-.margins {
-    margin-top: 0 !important;
-    margin-bottom: 10%;
-}
   
 }
 
 @media (max-width: 640px)  and (orientation : landscape){
-  
+
 }
 
 @media (max-width: 576px) and (orientation : landscape) {
+.upps {
+        margin-top: 0% !important;
+        margin-bottom: 15% !important;
+        margin-left: 3% !important;
+    
+            h1 {
+                font-size: 120% !important;
+            }
+            h2{
+                font-size: 105% !important;
+            }
+    }
   
 }
 @media (min-width: 576px) {
@@ -63,7 +91,21 @@ a.WrongUser {
 }
 }
 @media (max-width: 414px) and (orientation : portrait) {   
-  	.center_about {
+  	.upps {
+        margin-top: 35%;
+        margin-bottom: 0% !important;
+        margin-left: 5% !important;
+    
+            h1 {
+                font-size: 150% !important;
+            }
+            h2{
+                font-size: 130% !important;
+            }
+    }
+
+
+    .center_about {
     	top: 23% !important;
 	}
 	div#notice {
@@ -80,7 +122,20 @@ a.WrongUser {
 	}
 }
 @media (max-width: 360px) and (orientation : portrait) {  
-	div#notice {
+	/*.upps {
+        margin-top: 35%;
+        margin-bottom: 0% !important;
+        margin-left: 0% !important;
+    
+            h1 {
+                font-size: 150% !important;
+            }
+            h2{
+                font-size: 130% !important;
+            }
+    }*/
+
+    div#notice {
 	    font-size: 55% !important;
 	}
 	.alert-dismissible {

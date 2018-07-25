@@ -1,12 +1,14 @@
 <% provide(:page_title, 'Unauthorised') %>
 <% provide(:unauthorised_active, 'active') %>
-<div class="container justify-content-center margins">
-	<h1> Ups!! You don't belong here</h1>
-	<h2> That's fine, simlpy click on <b>Sign out</b> or <b>Home Page</b></h2>
-	<br>
-	<h2> Thanks! </h2>
-	<br>
+<div class="upps">
 	<p>
+		<h1> Ups!!!</h1>
+		<h1> You don't belong here ...</h1>
+		<h2> That's fine, simlpy click on <b>Sign out</b> or <b>Home Page</b></h2>
+		<br>
+		<h2> Thanks! </h2>		
+	
+	
 		<%= link_to 'Sign out', destroy_user_session_path, class: " WrongUser", method: :delete%> | 
 		<%= link_to 'Home Page', root_path, class: " WrongUser"%>
 	</p>
