@@ -1,4 +1,17 @@
 
+
+img.Home_img {
+    height: 100%;
+    width: 100%;
+}
+
+.img-fluid {      
+  width: auto;
+  height: auto;
+  overflow:hidden;
+  position: relative;
+
+}
 .one {
     background-color: #f5e5e4;
     .signup{
@@ -29,4 +42,64 @@ p .signup{
 .cards {
     
 }
+
+
+
+
+
+/*---Media Queries --*/
+@media (min-width: 1100px) and (orientation: landscape){
+  .centered {
+      top: 75% !important;
+  }
+}
+@media (min-width: 1020px) { 
+  div#notice {
+    font-size: 95% !important;
+  }
+}
+@media (max-width: 992px) {
+  div#notice {
+    font-size: 80%;
+  }
+}
+@media (max-width: 764px) {  
+   
+}
+@media (max-width: 731px)  and (orientation : landscape){
+  div#notice {
+    font-size: 80%;
+  }
+}
+@media (max-width: 667px)  and (orientation : landscape){ 
+  div#notice {
+    font-size: 79%;
+  }
+}
+@media (min-width: 576px){
+    .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    }
+    div#notice {
+    font-size: 70%;
+  }
+}
+@media (max-width: 414px) and (orientation : portrait) { 
+  div#notice {
+    font-size: 80%;
+}
+ 
+}
+@media (max-width: 375px) and (orientation : portrait) { 
+  div#notice {
+    font-size: 55%;
+  }
+}
+@media (max-width: 360px) and (orientation : portrait) {  
+  div#notice {
+    font-size: 60%;
+  }
+}
+
 
