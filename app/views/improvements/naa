@@ -34,11 +34,13 @@
             <%= link_to like_improvement_path(improvement), class: "like", method: :put do %>
             <button type="button" class="btn -btn-info thumbs" aria-label="Left Align">
               <i class="fa fa-thumbs-up"></i>
+              <!--<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" aria-hidden="true"></span> -->
               <span class="badge"><%= improvement.get_upvotes.size %></span>
             </button>
             <% end %>
             <%= link_to unlike_improvement_path(improvement), class: "like", method: :put do %>
             <button type="button" class="btn -btn-info thumbs" aria-label="Left Align">
+              <!--<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" aria-hidden="true"></span>-->
               <i class="fa fa-thumbs-down"></i>
               <span class="badge"><%= improvement.get_downvotes.size %></span>
             </button>
@@ -61,9 +63,7 @@
     </tbody>
   </table>
   </div>
-  <hr>  
+  <hr>
+  <br>
   <%= link_to new_improvement_path do%><i class="fa fa-plus"></i><% end %></td>
 </div>
-<br class="br-improvement">
-
-  

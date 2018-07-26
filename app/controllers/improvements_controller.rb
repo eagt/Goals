@@ -1,10 +1,10 @@
 class ImprovementsController < ApplicationController
 
   before_action :authenticate_user!, :except => [:index]
-  before_action :set_improvement, only: [:show, :edit, :update , :destroy]
+  before_action :set_improvement, only: [:show, :edit, :update , :destroy, :upvote, :downvote]
 
   def index
-    @improvements = Improvement.all   
+    @improvements = Improvement.all.order(:cached_votes_up => :desc)   
   end
 
   def show   
@@ -50,6 +50,17 @@ class ImprovementsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def upvote
+    @improvement.upvote_from current_user
+    redirect_to improvements_path
+  end
+
+  def downvote
+    @improvement.downvote_from current_user
+    redirect_to improvements_path
+  end
+
 
   private  
     def set_improvement

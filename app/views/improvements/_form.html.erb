@@ -3,7 +3,9 @@
 	<%= f.input :improvement, :label => "What to improve", placeholder: "Explain the improvement idea", autofocus: true, :label_html => { :class => 'type' }%>	
 	<br>
 	<br>
- <h4>Listis' reply</h4>
+
+  <% if current_user && current_user.admin == true %>
+  <h4>Listis' reply</h4>
     <div class="table-responsive-lg">
       <table class='table'>
         <thead>
@@ -28,6 +30,7 @@
       <hr>
     </div>
     <br>
+  <% end %>
   <div class="form-actions">
     <%= f.button :submit, class: 'btn btn-success', id: 'formButton'%>
   </div>   

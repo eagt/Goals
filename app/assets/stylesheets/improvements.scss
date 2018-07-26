@@ -8,3 +8,24 @@
     font-weight: 300;
 	color: #007bff // blue-logo
 }
+
+button.btn.-btn-info.thumbs{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0rem 0.75rem !important;
+    font-size: 1rem;
+    line-height: 1.1;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+br.br-improvement {
+    line-height: 7;
+}

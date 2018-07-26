@@ -8,5 +8,14 @@ get 'pages/unauthorised'
 devise_for :users
 resources :lists 
 resources :tasks
-resources :improvements
+
+resources :improvements do 
+	member do 
+		put "like" => "improvements#upvote"
+		put "unlike" => "improvements#downvote"
+
+	end
 end
+	
+end
+
