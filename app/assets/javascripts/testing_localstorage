@@ -1,0 +1,73 @@
+	/*save_localstorage();
+
+get_localstorage ();
+
+function get_localstorage (){
+//It is a best practice to check if the information we are going to request
+	from localstorage exist. This is done using a quick conditional if/else as shown below 
+	if( localStorage.getItem("name")) {
+	// if it exists
+		let name = localStorage.getItem("name")
+		let person = JSON.parse( localStorage.getItem("person"))
+
+		console.log (name)
+		console.log(person)
+	} else {
+		console.log( "There is nothing in localstorage")
+
+	}
+}
+
+function save_localstorage(){
+	
+	let person = {
+		name: "Andrew",
+		age: 31,
+		coords: {
+			lat:10,
+			long: -10
+		}
+	};
+
+	let name = "Pet";
+/* ( Key, value) Here I will pass the key/value pair (name/Pet)
+   if checked on browser local storage we get the value key = name , value = Pet which is correct 
+	localStorage.setItem("name", name);
+
+
+/* Now if we would like to see the person objet which is an array Object we need to use the JSONstigify 
+   to conver the array into string. THE REASON I SBECAUSE localstorage ONLY ACCEPTS STRING VALUES  
+	localStorage.setItem("person", JSON.stringify(person));
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

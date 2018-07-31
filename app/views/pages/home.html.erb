@@ -1,66 +1,74 @@
 <% provide(:page_title, 'Home') %>
 <% provide(:home_active, 'active') %>
 
-<div class="img-fluid">
-	<%= image_tag "babysteps.png", alt: "Top image", :class => "Home_img" %>
-</div>
-<br>
-<div class="jumbotron one d-flex justify-content-center">
-	<p><a class="display-6">&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  We were born</a><br>
-	<a>&emsp; &emsp;  with the <b><i>power</i></b> of <b>FOCUS</b>. </a><br>
-			<a>&emsp; &emsp; &emsp; &emsp; &ensp;&emsp; &emsp; &emsp; &emsp; Yes! You still have it.</a><br>
-			    <a>&emsp; &emsp; &emsp; &emsp; &emsp; &emsp; So, go back to basics, </a><br>
-			 <a>&emsp;&emsp;  &emsp; &emsp; &emsp;&emsp;&emsp; &emsp; &emsp; &emsp;&emsp; &emsp;<b>FOCUS</b> and you will get it </b></a>
-			 		<!--<a>&emsp;&emsp;&emsp;  &emsp; &emsp; &emsp;&emsp;&emsp; &emsp;anything you Focus on.</a> -->
-	</p>
-</div>
-<br>
-<br>
-<div class="text-center">
-	<p>
+<div class="container-fluid">
+	<div class="img-fluid">
+		<%= image_tag "Sky-sea.png", alt: "Top image", :class => "Home_img" %>
+		<!-- Rocks.png-->
+		<!-- focus-banner.png-->
+		<!-- Focus.png-->
+		<!-- Sunbeam sky yellow.png-->
+		<!-- Sky-sea.png-->
+		<!-- Sunbeam.png-->
+		<!-- Sunbeam-valle.png-->
+	</div>
+	<div class="jumbotron one d-flex justify-content-center jbt-home-focus">
+		<p class="p-home-focus">We were born<br>
+		with the <b><i>power</i></b> of <b>FOCUS</b>.<br>
+		Yes! You still have it.<br>
+		So, go back to basics, <br>
+		<b>FOCUS</b> and you will get it </b>
+		</p>
+	</div>
+	<br>
+	<div class="text-center what-is-li">	
 		<h2>What is Listis?</h2> 
-		&emsp;&emsp;&emsp;<h5><i>Listis is a tool you use to stay focus and achieve your GOALS!!<i></h5>
-	</p>
-</div>
-<br>
-<br>
-<br>
-<br>
-<div class="d-flex p-1 justify-content-center"">
-	<h2>Achieve your Goals in 3 steps</h2>
-</div>
-<div class="jumbotron p-1 cards">
-	<div class="row">
-		<div class="card one col-xs-12 col-md-4 col-lg-4">
-		<br>	  		
-  			<h5>1. Create Account</h5>
-  			<br>
-  			<p>Click on <a class="signup" href="/users/sign_up">Sign up</a> and create your free account</p>
-		</div>
-		<div class="card two col-xs-12 col-md-4 col-lg-4">			
-		<br>
-	  		<h5>2. Set Goals</h5>
-	  		<br>
-	  		<p>Set your Goals and the steps to get to them with a deadline</p>	
-		</div>
-		<div class="card three col-xs-12 col-md-4 col-lg-4">			
-		<br>
-	  		<h5>3. Achieve your Goals!</h5>
-	  		<br>
-	  		<p>As you go along change between the 3 possible <i>statuses</i> on your steps, you can modify the <i>status</i> as needed. Your aim is to <i><b>Complete</b></i> all your steps </p>		
+		<p><i>Listis is your tool at hand to set, track and stay focus to achieve your Goals!!</i></p>	
+	</div>
+	<div class="d-flex justify-content-center achieve-ur-goals">
+		<h2>Achieve your Goals in 3 steps</h2>
+	</div>
+
+	<div class="jumbotron cards jumbo-three-steps">
+		<div class="row row-three-steps">
+			<div class="card one col-xs-12 col-md-4 col-lg-4">
+			  <%= image_tag "create-account.png", class: "create-account"%>
+			  <div class="card-body">
+			    <h2 class="card-title text-center">1. Create Account</h2>			    
+			    <p class="card-text">Click on <a class="signup" href="/users/sign_up">Sign up</a> and create your free and secure account</p>
+			    <div class="d-flex justify-content-center">
+			    <a href="#" class="btn btn-primary text-center">Sign up</a>
+			    </div>
+			  </div>
+			</div>
+			<div class="card one col-xs-12 col-md-4 col-lg-4">
+			  <%= image_tag "set-goals.png", class: "set-goals"%>
+			  <div class="card-body">
+			    <h2 class="card-title text-center">2. Set Goals</h2>
+			    <p class="card-text">Set your Goals, the steps and deadline, then go and enjoy the ride </p>		 
+			  </div>
+			</div>	
+			<div class="card one col-xs-12 col-md-4 col-lg-4">
+			  <%= image_tag "achieve-goals.png", class: "achieve-goals"%>
+			  <div class="card-body">
+			    <h2 class="card-title text-center">3. Achieve your Goals!</h2>
+			    <p class="card-text">Mark the tasks' status as you go along. Your aim is to <i><b>Complete</b></i> all your tasks</p>		   
+			  </div>
+			</div>
 		</div>
 	</div>
+
+	<div class="jumbotron p-0">
+		<p class="last-home-center text-center">Don't over complicate it, remember less is more, just set few goals at the time, achieve them and move on to create few more, you will be amazed by what you can achieve when you <b>FOCUS</b>. These are your success lists.
+	    What are you waiting for?<a class="last-part" href="/users/sign_up"> Sign up</a> and start achieving...
+		<br>
+		<br>
+		If you think of any improvement you would like to see on this application let us know, simply click on <a class="last-part" href="/improvements"> Improvements </a> at the top and add it. Others will be able to see it and vote for it... check what others have suggeted already.  
+		</p>
+	</div>
+	<br>
 </div>
-<br>
-<br>
-<div class="jumbotron p-0">
-	<p class="text-center">
-		<h5> &emsp;&emsp;  &emsp; &emsp; Don't over complicate it, less is more, just set few goals at the time, achieve them and move on to create few more, you will be amazed by what you can achieve. These are your success lists.
-			<p class="text-center"> What are you waiting for?<a class="signup" href="/users/sign_up"> Sign up</a> and start achieving</p></h5>
-	</p>
-</div>
-<br>
-<br>
+
 
 
 
