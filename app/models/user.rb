@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :lists, :dependent=> :destroy
   has_many :tasks, :dependent=> :destroy
   has_many :improvements, :dependent=> :destroy
+  acts_as_voter
 end

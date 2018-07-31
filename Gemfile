@@ -36,7 +36,7 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 gem 'devise', '~> 4.4', '>= 4.4.3'
 
-#gem 'webpacker', '~> 3.4'
+gem 'acts_as_votable', '~> 0.11.1'
 
 
 
