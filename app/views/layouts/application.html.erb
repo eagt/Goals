@@ -18,10 +18,11 @@
 
   <body>
 
-	  <%= render 'layouts/navbar' %> <%# As it is outside the container it will use the fullwidth %>
+	  
    
 
     <% unless current_page?(root_path) %>
+      <%= render 'layouts/navbar' %> <%# As it is outside the container it will use the fullwidth %>   
       <div class="container <%= controller_name %> <%= action_name %> ">
     <% end %>
     

@@ -2,11 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+    padding-top: 5%;
+}
+
 
 .improvement-intro {
-	font-size :1.43rem;
-    font-weight: 300;
-	color: #007bff // blue-logo
+	font-size :1.73rem;
+    font-weight: 330;
+	color: #007bff;// blue-logo
+    .b {
+    font-weight: bolder;
+    color: #e600fd;
+    font-weight: 450;
+    }
 }
 
 button.btn.-btn-info.thumbs{

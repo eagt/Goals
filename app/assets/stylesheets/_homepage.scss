@@ -6,15 +6,33 @@
     //margin-left: auto;
 }
 
+// very important to get the pic as a baground on the top of the navabar
+.top {
+  background: url('Sky-sea.png');
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+}
+
+
+.home-navbar {
+    background-color: transparent;
+    a {
+      color: white !important;
+    }
+    .dropdown-menu.show {
+      background-color: transparent;
+    }
+   .nav-link.active {
+      color: #f2fa00 !important;
+    }
+}
+
+
 
 *, *::before, *::after {
  //      box-sizing: unset; 
 }
-
-/*img.Home_img {
-    height: 100%;
-    width: 100%;
-}*/
 
 img.Home_img {
     height: 100%;
@@ -38,17 +56,18 @@ img.Home_img {
   margin-top: 6rem;
 }
 .p-home-focus {
-  color: #74771dd9;
-  font-size: 38px !important;
-  box-shadow: 0 0 black;
-  box-shadow: 17px -6px 20px 0px #5c5e26a8;
-  background-color: #a8701a33;
+  color: #f7ff00;
+  font-size: 44px !important;
+  //box-shadow: 0 0 black;
+  //box-shadow: 17px -6px 20px 0px #5c5e26a8;
+  background-color: transparent;
   padding: 2%;
+  text-shadow: -2px -1px 17px #ff0000;
 }
 
 .what-is-li {
   line-height: 3;
-  background-color: #09f109b0;
+  background-color: #00ffe733;
   padding-bottom: 4%;
   box-shadow: 20px 4px 20px 6px #22643ccc;
   padding-top: 5%;
@@ -140,6 +159,9 @@ p.card-text {
 p .signup {
     font-weight: 600;
     font-size: 23.8px;
+}
+.green {
+  color: #4daf43;
 }
 
 .last-home-center {
