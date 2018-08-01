@@ -2,16 +2,24 @@
     width: 100%;
     padding-right: 0px !important; 
     padding-left: 0px !important; 
-    //margin-right: auto;
-    //margin-left: auto;
 }
 
-// very important to get the pic as a baground on the top of the navabar
+.layer {
+  background-color: #19252bab;
+  position: abosolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  weight: 100%;
+}
+
+// very important to get the pic as a baground on the top of the navabar. Make sure you add the image-url tag.
 .top {
-  background: image-url('Sky-sea.png');
+  background: image-url('listis-top-3.png');
   height:100vh;
   min-height:400px;
   background-size:cover;
+  //background-color: #19252bab;
 }
 
 
@@ -53,35 +61,44 @@ img.Home_img {
 .jbt-home-focus {  
   background-color: #ffffff00 !important;
   margin-bottom: 6rem;
-  margin-top: 6rem;
+  padding-top: 0 !important;
 }
 .p-home-focus {
-  color: #f7ff00;
+  color: #fafff0;
   font-size: 44px !important;
-  //box-shadow: 0 0 black;
-  //box-shadow: 17px -6px 20px 0px #5c5e26a8;
   background-color: transparent;
-  padding: 2%;
-  text-shadow: -2px -1px 17px #ff0000;
+  padding-top: 8%;
+  text-shadow: -5px 1px 20px #000000;
 }
 
-.what-is-li {
-  line-height: 3;
-  background-color: #00ffe733;
-  padding-bottom: 4%;
-  box-shadow: 20px 4px 20px 6px #22643ccc;
+.what-is-li {  
+  background-color: #0a0a0ade;
   padding-top: 5%;
+  color: white;
     h2{
-      font-size: 3.5rem;
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: white;
     } 
     p {
-    margin-bottom: 0rem;
-      i{
-      font-size: 2.2rem;    
-      }
+      margin-bottom: 0rem;
+      line-height: 1.5 !important;
+      padding: 10%;
+      margin-left: 2%;      
+      font-size: 1.6rem;   
+      font-weight: 200; 
+      
     }
 }
 
+   
+img.img_what_listis {
+    max-width: 100%;
+}
+
+.achieve {
+  margin-top: 16%;
+}
 .achieve-ur-goals {
   //background-color: var(--home-bg-color);
   padding-top: 5% !important;
@@ -92,38 +109,37 @@ img.Home_img {
 .jumbo-three-steps {
       background-color: #ffffffff !important;
       border-radius: 0 !important;
-      padding: 6rem 3rem !important;
-      margin-bottom: 1.5rem !important;        
+      padding: 0 !important;
+      margin-bottom: 1.5rem !important; 
+      h2, .h2 {
+        font-size: 1.9rem;
+      }       
 }
 
 .row-three-steps {  
   margin-right: 0px !important;
   margin-left: 0px !important;
+      margin-top: 6.5rem
 }
 
 .create-account {
-  height: 360px;
-  background-color: #f200ff;
-  padding-top: 3%;
+  height: 65px;
+  width: 30%;
+  background-color: transparent;
+  margin-left: 35%;
 }
 .set-goals {
-  height: 360px;
-  background-color: #fff900;
-  padding-top: 3%;
+  height: 70px;
+  width: 30%;
+  background-color: transparent;
+  margin-left: 35%;
 }
 .achieve-goals {
-  height: 360px;
-  background-color: #0006ff;
-  padding-top: 3%;
+  height: 70px;
+  width: 30%;
+  background-color: transparent;
+  margin-left: 35%;
 }
-
-/*.card-body {
-    flex: 1 1 auto;
-        padding-top: 10%;
-    font-size: 28px;
-}*/
-
-
 
 .card {
   background-color: transparent !important;
@@ -149,30 +165,42 @@ img.Home_img {
 
 .card-title {
   margin-bottom: 1.75rem !important;
-  margin-top: 2.5rem !important;
+  margin-top: 0!important;
+}
+.card-body {
+    flex: 1 1 auto;
+    padding-left: 1rem;
+    padding-top: 1.5rem;
 }
 p.card-text {    
-  font-size: 25px;
-  margin-bottom: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
 }
 
 p .signup {
     font-weight: 600;
-    font-size: 23.8px;
-}
-.green {
-  color: #4daf43;
+    font-size: 1.4rem;
 }
 
+jbt-dont-complicate{
+  //background-color: #ffffff00 !important;
+  //margin-bottom: 6rem;
+  //margin-top: 6rem;
+}
+.middle{
+  background: image-url('home-middle-part-1.png');
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+}
 .last-home-center {
   font-size: 35px;
-  background-color: yellow;
-  box-shadow: 0 0 20px 7px #bfa8028a;
-  padding-bottom: 12%;
-  padding-top: 12%;
-  margin-bottom: 2.7rem !important;
-  padding-left: 15%;
-  padding-right: 15%;
+  background-color: white;
+  padding-bottom: 7%;
+  padding-top: 7%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .last-part {
