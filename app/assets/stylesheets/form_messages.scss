@@ -6,16 +6,11 @@
 h3.contacth3 {
     text-align: center !important;
     margin-top: 10%;
-    color:  var(--main-color);
+    color:  #302B2C;
 }
-/*a.nav-link.active.purple {
-    color: #e800ff !important;
-}*/
-.orange {
-  color:  #bd9412 !important;
-}
+
 p.contact {
-    color: var(--main-color);
+    color: #302B2C;
     margin-bottom: 3rem !important; 
 }
 form#new_form_message {
@@ -30,24 +25,43 @@ form#new_form_message {
     margin-bottom: 1% !important;
     margin-top: 10% !important;
     color: #fff;
-    background-color: var(--main-color) !important;
-    border-color: var(--main-color) !important;
+    background-color: #302B2C !important;
+    border-color: #302B2C !important;
 }
 abbr[title], abbr[data-original-title] {
     text-decoration: none !important;
 }
 .simple_form label {
-    color: var(--main-color) !important;
+    color: #302B2C;
 }
 .form-control {
-  border-bottom: 1px solid var(--main-color) !important;
+  border-bottom: 1px solid #302B2C  !important;
   border-top-color: white !important;  
   border-right-color: white !important;
   border-left-color: white !important;
   border-radius: 0rem !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   //box-shadow: 0px 1px 0px 0px #ddc0ff;
+  
 }
+
+/*
+.uneditable-input:focus {   
+  border-color: rgba(126, 239, 104, 0.8) !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(126, 239, 104, 0.6) !important;
+  outline: 0 none !important;
+}*/
+
+.form-control:focus {
+    /* color: #ec0f5d; */
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(65, 53, 57, 0.25) !important;
+}
+
+
+
 .hidden { 
 display: none; 
 }
@@ -56,10 +70,10 @@ display: none;
     margin-bottom: 10%;
 }
 .btn-back{
-    color: var(--main-color) !important;
+    color: #302B2C !important;
     background-color: white !important;
     background-image: none;
-    border-color: var(--main-color) !important;
+    border-color: #302B2C !important;
     margin-top: 4% !important;
 
 }

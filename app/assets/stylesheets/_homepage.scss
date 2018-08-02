@@ -1,30 +1,7 @@
-.container-fluid {
-    width: 100%;
-    padding-right: 0px !important; 
-    padding-left: 0px !important; 
-}
-
-.layer {
-  background-color: #19252bab;
-  position: abosolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  weight: 100%;
-}
-
-// very important to get the pic as a baground on the top of the navabar. Make sure you add the image-url tag.
-.top {
-  background: image-url('listis-top-3.png');
-  height:100vh;
-  min-height:400px;
-  background-size:cover;
-  //background-color: #19252bab;
-}
-
-
 .home-navbar {
     background-color: transparent;
+    padding-left: 3rem !important;
+    padding-top: 1rem !important;
     a {
       color: white !important;
     }
@@ -35,9 +12,28 @@
       color: #f2fa00 !important;
     }
 }
-
-
-
+.container-fluid {
+    width: 100%;
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+}
+.layer {
+  background-color: #19252bab; //#20433fab is good too.
+  position: abosolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  weight: 100%;
+}
+// very important to get the pic as a baground on the top of the navabar. Make sure you add the image-url tag.
+.top {
+  background: image-url('listis-top-3.png');
+  height:100vh;
+  min-height:400px;
+  background-size:cover;
+  width: 100%
+  //background-color: #19252bab;
+}
 *, *::before, *::after {
  //      box-sizing: unset; 
 }
@@ -72,7 +68,7 @@ img.Home_img {
 }
 
 .what-is-li {  
-  background-color: #0a0a0ade;
+  background-color: #302B2C;
   padding-top: 5%;
   color: white;
     h2{
@@ -91,7 +87,6 @@ img.Home_img {
     }
 }
 
-   
 img.img_what_listis {
     max-width: 100%;
 }
@@ -174,28 +169,29 @@ img.img_what_listis {
 }
 p.card-text {    
     font-size: 1.4rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 3rem;
     font-weight: 400;
 }
 
 p .signup {
     font-weight: 600;
-    font-size: 1.4rem;
+    font-size:  1.4rem;
 }
 
-jbt-dont-complicate{
-  //background-color: #ffffff00 !important;
-  //margin-bottom: 6rem;
-  //margin-top: 6rem;
-}
 .middle{
   background: image-url('home-middle-part-1.png');
   height:100vh;
   min-height:400px;
   background-size:cover;
 }
+.row-girl {
+    display: 0;
+    flex-wrap: wrap;
+    /* margin-right: -15px; */
+    /* margin-left: -15px; */
+}
 .last-home-center {
-  font-size: 35px;
+  font-size: 29px;
   background-color: white;
   padding-bottom: 7%;
   padding-top: 7%;
@@ -204,7 +200,7 @@ jbt-dont-complicate{
 }
 
 .last-part {
-    font-size: 35px;
+    font-size: 29px;
     font-weight: 500 !important;
 }
 

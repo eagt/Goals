@@ -1,0 +1,30 @@
+/*.navbar {
+  min-height: 55px; // Changed from  height: 55px; as it was making the tabes to look wider than navbar
+  border-radius: 0;
+  margin-bottom: 0px;        
+  background-color: #71e6c1; //navbar-bg-color
+     
+      .navbar-brand {
+          font-weight: bolder;
+          font-size:28px;
+          .different {
+              font-weight: 50;
+              color: #f75656;                
+          }
+      }
+      // Passing the border wideness for the toggler button            
+      .navbar-toggler {
+          border: 1px solid; //this will give the border to the toggle button
+      }
+      
+      .nav-link {
+            color: primary-color-light !important;
+              font-size: 17px;
+              font-weight: 500;
+            &.active {
+              color: black !important; // Changing the color when the tab/link is active
+            }
+      
+      }
+        //list-style-type: none; /*Eliminates the dot(*) from the <li>*/
+}*/

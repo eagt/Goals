@@ -1,32 +1,23 @@
-.navbar {
-  min-height: 55px; // Changed from  height: 55px; as it was making the tabes to look wider than navbar
-  border-radius: 0;
-  margin-bottom: 0px;        
-  background-color: #71e6c1; //navbar-bg-color
-     
-      .navbar-brand {
-          font-weight: bolder;
-          font-size:28px;
-          .different {
-              font-weight: 50;
-              color: #f75656;                
-          }
-      }
-      /* Passing the border wideness for the toggler button  */           
-      .navbar-toggler {
-          border: 1px solid; //this will give the border to the toggle button
-      }
-      
-      .nav-link {
-            color: primary-color-light !important;
-              font-size: 17px;
-              font-weight: 500;
-            &.active {
-              color: black !important; // Changing the color when the tab/link is active
-            }
-      
-      }
-        list-style-type: none; // Eliminates the dot(*) from the <li>
+.navbar-brand {
+  font-weight: bolder;
+  font-size:28px;
+  .different {
+      font-weight: 50;
+      color: #f75656;                
+  }
+}
+.navbar-others {
+    background-color: #302B2C;
+    
+    a {
+      color: white !important;
+    }
+    .dropdown-menu.show {
+      background-color: #302B2C;
+    }
+   .nav-link.active {
+      color: #f2fa00 !important;
+    }        
 }
 
 .footer {
@@ -35,7 +26,7 @@
   height: 40px;
   bottom: 0;
   width: 100%;
-  background-color: #323f3a;
+  background-color: #302B2C;
   color: #ffffff;
   left: 0;
   right: 0;
@@ -44,7 +35,6 @@
     text-align: center !important;
     padding-top: 10px;
     }
-
 }
 
 
