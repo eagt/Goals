@@ -18,7 +18,7 @@
     padding-left: 0px !important; 
 }
 .layer {
-  background-color: #19252bab; //#20433fab is good too.
+  background-color: #575832ab; //#20433fab is good too.
   position: abosolute;
   top: 0;
   left: 0;
@@ -60,11 +60,11 @@ img.Home_img {
   padding-top: 0 !important;
 }
 .p-home-focus {
-  color: #fafff0;
-  font-size: 44px !important;
+  color: white;
+  font-size: 34px !important;
   background-color: transparent;
   padding-top: 8%;
-  text-shadow: -5px 1px 20px #000000;
+  text-shadow: 0px 0px 10px #000000;
 }
 
 .what-is-li {  
@@ -205,6 +205,17 @@ p .signup {
 }
 
 /*---Media Queries --*/
+@media (min-width: 1360px) and (orientation: landscape){
+  .p-home-focus {
+    color: white;
+    font-size: 34px !important;
+    background-color: transparent;
+    margin-top: 12%;
+    margin-left: 54%;
+    text-shadow: 0px 0px 10px #000000;
+  }
+}
+
 @media (min-width: 1100px) and (orientation: landscape){
   .centered {
       top: 75% !important;
