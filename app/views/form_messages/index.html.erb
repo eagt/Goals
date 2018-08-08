@@ -23,9 +23,11 @@
         <td><%= form_message.subject %></td>
         <td><%= form_message.phone %></td>
         <td><%= form_message.body %></td>
+      
         <td><%= link_to 'Show', form_message %></td>
         <td><%= link_to 'Edit', edit_form_message_path(form_message) %></td>
         <td><%= link_to 'Destroy', form_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
       </tr>
     <% end %>
   </tbody>
