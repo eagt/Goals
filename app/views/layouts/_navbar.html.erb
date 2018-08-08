@@ -1,16 +1,13 @@
 <% if current_page?(root_path) %>
-  <nav class="navbar navbar-expand-md home-navbar"> 
+  <nav class="navbar navbar-expand-md home-navbar navbar-dark "> 
 <% else %>
-  <nav class="navbar navbar-expand-md navbar-others"> <%#<nav class="navbar-expand-md will expand from medium screen size up %>
+  <nav class="navbar navbar-expand-md navbar-others navbar-dark "> <%#<nav class="navbar-expand-md will expand from medium screen size up %>
 <% end %>
 
 <%# Brand %>
-<a class = 'navbar-brand' href='/'>List<span class = different '>is</span>
- <%# href='/' will point to the same root define in routes %>
- <%# Will divide the brand name into two parts allowing me to give two different colors %>
-</a>
+<a class = 'navbar-brand' href='/'>Listis</a>
 <%# Toggle button %>
-  <button class="navbar-toggler navbar-toggler-right navbar-light " type="button" data-toggle="collapse" data-target="#collapsingnavbar" aria-controls="collapsingnavbar" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right custom-toggler " type="button" data-toggle="collapse" data-target="#collapsingnavbar" aria-controls="collapsingnavbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 

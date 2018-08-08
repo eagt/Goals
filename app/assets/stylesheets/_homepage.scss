@@ -12,6 +12,20 @@
       color: #f2fa00 !important;
     }
 }
+/*.navbar-toggler {
+  border: 0.5px solid white!important;
+  margin-right: 3%;
+}*/
+
+.custom-toggler.navbar-toggler {
+ border: 0.5px solid white!important;
+  margin-right: 5%;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+
 .container-fluid {
     width: 100%;
     padding-right: 0px !important; 
@@ -92,7 +106,7 @@ img.img_what_listis {
 }
 
 .achieve {
-  margin-top: 16%;
+  margin-top: 8.5%;
 }
 .achieve-ur-goals {
   //background-color: var(--home-bg-color);
@@ -107,7 +121,7 @@ img.img_what_listis {
       padding: 0 !important;
       margin-bottom: 1.5rem !important; 
       h2, .h2 {
-        font-size: 1.9rem;
+        font-size: 1.2rem;
       }       
 }
 
@@ -168,18 +182,18 @@ img.img_what_listis {
     padding-top: 1.5rem;
 }
 p.card-text {    
-    font-size: 1.4rem;
+    font-size: 1rem;
     margin-bottom: 3rem;
     font-weight: 400;
 }
 
 p .signup {
     font-weight: 600;
-    font-size:  1.4rem;
+    font-size:  1rem;
 }
 
 .middle{
-  background: image-url('home-middle-part-1.png');
+  background:  image-url('home-middle-part-1.png');
   height:100vh;
   min-height:400px;
   background-size:cover;
@@ -187,11 +201,11 @@ p .signup {
 .row-girl {
     display: 0;
     flex-wrap: wrap;
-    /* margin-right: -15px; */
-    /* margin-left: -15px; */
+    margin-right: -15px; 
+    margin-left: -15px; 
 }
 .last-home-center {
-  font-size: 29px;
+  font-size: 24px;
   background-color: white;
   padding-bottom: 7%;
   padding-top: 7%;
@@ -214,11 +228,59 @@ p .signup {
     margin-left: 54%;
     text-shadow: 0px 0px 10px #000000;
   }
+  .top {
+  height:100vh;  
+  min-height:400px;  
+  }
+
+  h2.achieve {
+    font-size: 3rem;
+  }
+
+  h2.card-title {
+    font-size: 2rem;
+  }
+  p.card-text {
+    font-size: 1.4rem;
+  }
+  .middle {    
+    height: 95vh;    
+  }
+  .last-home-center {
+    font-size: 28px;
+  }
+  p .signup {    
+    font-size:  1.4rem;
+  }
+  .last-part {
+    font-size: 28px;
+  }
+
 }
 
-@media (min-width: 1100px) and (orientation: landscape){
-  .centered {
-      top: 75% !important;
+
+
+
+
+
+
+
+// Ipad pro
+@media (max-width: 1024px) and (orientation: portrait){
+
+ .top {
+  height:50vh;  
+  min-height:20px;  
+  }
+  .p-home-focus {
+    padding-top: 33%;
+    margin-left: 20%;
+  }
+  .achieve {
+    margin-top: 6%;
+  }
+  .middle {    
+    height: 35vh;    
   }
 }
 @media (min-width: 1020px) { 
@@ -231,14 +293,202 @@ p .signup {
     font-size: 80%;
   }
 }
-@media (max-width: 764px) {  
-   
-}
-@media (max-width: 731px)  and (orientation : landscape){
+
+@media (max-width: 831px)  and (orientation : landscape){
+.p-home-focus {      
+      font-size: 23px !important;     
+      padding-top: 10%;     
+  }
+  .top {
+    height:50vh;  
+  }
+  .achieve {
+    margin-top: 10%;
+  }
+  .create-account {
+    height: 50px;
+    width: 30%;
+    background-color: transparent;
+    margin-left: 38%;
+  }
+  .set-goals {
+    height: 50px;
+    width: 30%;
+    background-color: transparent;
+    margin-left: 38%;
+  }
+  .achieve-goals {
+    height: 50px;
+    width: 30%;
+    background-color: transparent;
+    margin-left: 38%;
+  }
+  h2.achieve {
+    font-size: 1.72rem;
+  }
+
+  h2.card-title {
+    font-size: 1.2rem;
+  }
+  p.card-text {
+    font-size: 0.98rem;
+  }
+  .what-is-li h2 {
+        margin-top: 10%;
+  }
+  p.last-home-center {
+    font-size: 1.22rem;
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  p .signup {    
+    font-size:  0.98rem;
+  }
+  .last-part {
+    font-size: 1.22rem;
+  }
+  .row-girl {
+    margin-top: 0%;
+    margin-left: -105px;
+  }
+} 
+
+@media (max-width: 800px) and (orientation : portrait) { 
   div#notice {
     font-size: 80%;
   }
+  .p-home-focus {      
+      font-size: 23px !important;     
+      padding-top: 10%;     
+  }
+  .top {
+    height:50vh;  
+  }
+  .what-is-li p {    
+    font-size: 1.35rem;   
+  }  
+  .achieve {
+    margin-top: 10%;
+  }
+  .create-account {
+    height: 50px;
+    width: 26%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  .set-goals {
+    height: 50px;
+    width:26%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  .achieve-goals {
+    height: 50px;
+    width: 26%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  h2.achieve {
+    font-size: 1.72rem;
+  }
+
+  h2.card-title {
+    font-size: 1rem;
+  }
+  p.card-text {
+    font-size: 0.8rem;
+  }
+  .what-is-li h2 {
+        margin-top: 10%;
+  }
+  .middle {
+    height: 10vh;
+    min-height: 400px;
+  }
+  p.last-home-center {
+    font-size: 1.22rem;
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  p .signup {    
+    font-size:  0.8rem;
+  }
+  .last-part {
+    font-size: 1.22rem;
+  }
+  .row-girl {
+       margin-left: -105px;
+  }
+
 }
+@media (max-width: 740px)  and (orientation : landscape){
+  div#notice {
+    font-size: 80%;
+  }
+  .p-home-focus {      
+      font-size: 23px !important;     
+      padding-top: 10%;     
+  }
+  .top {
+    height:50vh;  
+  }
+  .card23 {
+    margin-top: 15%;
+  }
+  .achieve {
+    margin-top: 10%;
+  }
+  .create-account {
+    height: 50px;
+    width: 16%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  .set-goals {
+    height: 50px;
+    width: 16%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  .achieve-goals {
+    height: 50px;
+    width: 16%;
+    background-color: transparent;
+    margin-left: 42%;
+  }
+  h2.achieve {
+    font-size: 1.72rem;
+  }
+
+  h2.card-title {
+    font-size: 1.52rem;
+  }
+  p.card-text {
+    font-size: 1.12rem;
+  }
+  .what-is-li h2 {
+        margin-top: 10%;
+  }
+  p.last-home-center {
+    font-size: 1.22rem;
+    margin-top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  p .signup {    
+    font-size:  1.22rem;
+  }
+  .last-part {
+    font-size: 1.22rem;
+  }
+  .row-girl {
+    margin-top: 10%;
+    margin-left: -105px;
+  }
+}
+
 @media (max-width: 667px)  and (orientation : landscape){ 
   div#notice {
     font-size: 79%;
@@ -256,18 +506,87 @@ p .signup {
 @media (max-width: 414px) and (orientation : portrait) { 
   div#notice {
     font-size: 80%;
-}
- 
+  }
+  .p-home-focus {      
+    font-size: 23px !important;      
+    padding-top: 25%; 
+  }
+  .top {
+    height:50vh;  
+  }
+  .what-is-li {
+    padding-top: 20%;
+  }
+  .card23 {
+    margin-top: 15%;
+  }
+
+  h2.achieve {
+    font-size: 1.58rem;
+  }
+  h2.card-title {
+    font-size: 1.42rem;
+  }
+  p.card-text {
+    font-size: 1.12rem;
+  }
+  p.last-home-center {
+    font-size: 1.22rem;
+    margin-top: 14%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  p .signup {    
+    font-size:  1.22rem;
+  }
+  .last-part {
+    font-size: 1.22rem;
+  }
+  .row-girl {
+    margin-top: 10%;
+    margin-left: -155px;
+  }
 }
 @media (max-width: 375px) and (orientation : portrait) { 
   div#notice {
     font-size: 55%;
+  }
+  .p-home-focus {      
+    font-size: 23px !important;      
+    padding-top: 35%;
+    margin-left: 10%;
+  }
+  .top {
+    height:50vh;  
+  }
+  .what-is-li {
+    padding-top: 20%;
+  }
+  .card23 {
+    margin-top: 15%;
+  }
+
+  h2.achieve {
+    font-size: 1.38rem;
+  }
+  h2.card-title {
+    font-size: 1.32rem;
+  }
+  p.card-text {
+    font-size: 1.12rem;
+  }
+  p .signup {    
+    font-size:  1.12rem;
+  }
+  .row-girl {
+    margin-left: -135px;
   }
 }
 @media (max-width: 360px) and (orientation : portrait) {  
   div#notice {
     font-size: 60%;
   }
+
 }
 
 
