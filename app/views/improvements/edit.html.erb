@@ -4,7 +4,7 @@
 	<%= render 'form', improvement: @improvement %>
 	
 	<hr>
-	<%= link_to lists_path  do%><i class="fa fa-arrow-left"></i><% end %> |
-	<%= link_to @improvement do %><i class="fa fa-binoculars"></i><% end %>
+	<%= link_to improvements_path, data: { toggle: 'tooltip', title: 'Back to Improvements'}  do%><i class="fa fa-arrow-left"></i><% end %> |
+	<%= link_to @improvement, data: { toggle: 'tooltip', title: 'View Improvement'} do %><i class="fa fa-binoculars"></i><% end %>
 </div>
 
