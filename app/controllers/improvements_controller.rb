@@ -61,6 +61,14 @@ class ImprovementsController < ApplicationController
     redirect_to improvements_path
   end
 
+  def user
+    @user = current_user
+  end
+
+  def admin
+    @admin = admin
+  end
+
 
   private  
     def set_improvement
