@@ -28,7 +28,8 @@ form#new_form_message {
     background-color: #302B2C !important;
     border-color: #302B2C !important;
 }
-abbr[title], abbr[data-original-title] {
+
+[title], abbr[data-original-title] {
     text-decoration: none !important;
 }
 .simple_form label {
@@ -44,6 +45,7 @@ abbr[title], abbr[data-original-title] {
   //box-shadow: 0px 1px 0px 0px #ddc0ff;
   
 }
+
 
 /*
 .uneditable-input:focus {   
@@ -108,12 +110,33 @@ display: none;
     font-size: 80%;
   }
 }
-@media (max-width: 764px) {  
-   
+@media (max-width: 825px)  and (orientation : landscape){
+   .col-form-label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .col-sm-3 {
+    flex: 0 0 28%;
+    max-width: 35%;
+  }
+  .col-sm-9 {
+    flex: 0 0 70%;
+    max-width: 70%;
+  }
 }
-@media (max-width: 731px)  and (orientation : landscape){
+@media (max-width: 736px)  and (orientation : landscape){
   div#notice {
     font-size: 80%;
+  }
+  .col-form-label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .col-sm-9 {
+    flex: 0 0 75% !important;
+    max-width: 85% !important;
+
   }
 }
 @media (max-width: 667px)  and (orientation : landscape){ 
@@ -128,6 +151,27 @@ display: none;
     }
     div#notice {
     font-size: 70%;
+  }
+ /* .col-form-label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .col-sm-9 {
+    flex: 0 0 75% !important;
+    max-width: 85% !important;
+
+  }*/
+}
+
+@media (max-width: 568px)  and (orientation : landscape){
+   .col-form-label {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .col-sm-3 {
+    flex: 0 0 28%;
+    max-width: 25%;
   }
 }
 @media (max-width: 414px) and (orientation : portrait) { 
