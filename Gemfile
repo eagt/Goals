@@ -37,7 +37,7 @@ gem 'popper_js', '~> 1.12.9'
 gem 'simple_form'
 
 # gems added to remove vulnerabilities
-gem 'loofah', '~> 2.0', '>= 2.0.3'
+gem 'loofah', '~> 2.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
