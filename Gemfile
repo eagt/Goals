@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+#gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 6.0', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record
 
 # Use Puma as the app server
@@ -38,6 +39,8 @@ gem 'simple_form'
 
 # gems added to remove vulnerabilities
 gem 'loofah', '~> 2.7'
+gem "webpacker"
+#gem 'activesupport', '~> 6.0', '>= 6.0.3.4'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
