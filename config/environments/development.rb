@@ -59,11 +59,10 @@ Rails.application.configure do
 
   # Setting required by devise and Action Mailer
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  config.action_mailer.delivery_method = :smtp
- 
+  config.action_mailer.delivery_method = :smtp 
   config.action_mailer.perform_deliveries = true
   
-  # Don't care if the mailer can't send.
+  # Don't care if the mailer can't send. Change it to true to see the errors.
   config.action_mailer.raise_delivery_errors = true
 
 

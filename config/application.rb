@@ -32,7 +32,6 @@ module SimpleNest
 	  authentication: :plain,
 	  enable_starttls_auto: true,
 	  domain: 'gmail.com'  # Added to see if it will work after a block by Google
-
 	  }	  
   end
 end

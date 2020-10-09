@@ -7,12 +7,6 @@
 
 
 
-
-
-
-
-
-
 ///////// Checking DateTime is less than or equal to Current and status is different to Completed. If so  highlight the due Deadline ////
 var d = new Date()
 console.log (d)
