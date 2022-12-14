@@ -38,7 +38,7 @@ gem 'popper_js', '~> 1.12.9'
 gem 'simple_form'
 
 # gems added to remove vulnerabilities
-gem 'loofah', '~> 2.7'
+gem 'loofah', '~> 2.19'
 gem "webpacker"
 #gem 'activesupport', '~> 6.0', '>= 6.0.3.4'
 
